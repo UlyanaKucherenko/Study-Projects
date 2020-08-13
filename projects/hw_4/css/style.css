@@ -11,7 +11,7 @@ body {
   color: white;
 }
 
-ul,li{
+ul,li,p{
   margin: 0;
   padding: 0;
   list-style: none;
@@ -21,7 +21,7 @@ header, main, footer{
   text-align: center;
 }
 
-header .logo {
+header {
   padding-top: 60px;
   margin-bottom: 50px;
 }
@@ -39,12 +39,23 @@ text-transform: uppercase;
 margin-bottom: 15px;
 }
 
-.line {
-  border: 1px solid white;
-  text-align: center;
+.social-media{
+  position: relative;
+  padding-top: 20px ;
   max-width: 230px;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 15px;
+}
+
+.social-media::before {
+  content:'';
+  height: 2px;
+  max-width: 230px;
+  width: 100%;
+  background-color:white;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 li {
