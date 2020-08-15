@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+   /* colors */
+   --white: #fff;
+   --black: #000;
+   --header-title-color:#0EC8CB;
+   --main-color:#999999;
+   /* font-sizes */
+   --title-size: 48px;
+
+   --main-size: 14px;
+   /* font-family */
+   --main-font:'PT Sans', sans-serif;
+   --title-font: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--main-size);
+  width: 100%;
+}
+
+.container {
+  max-width: 941px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 105px;
+  font-size: 100%;
+}
+
+.header__content {
+  max-width: 532px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__slogan {
+font-size: 12px;
+color: #898F99;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 35px;
+}
+
+.header__title {
+  font-size: var(--title-size);
+  color: var(--header-title-color);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  text-align: right  ;
+  letter-spacing: 3px;
+}
+
+.header__text {
+  font-size: 18px;
+  color: var(--main-color);
+  max-width:513px;
+  padding:0 0px ;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center  ;
+  /*text-align: justify*/;
+  /*letter-spacing: 1px;*/
+  font-family: var(--main-font);
+}
+
+.services__list {
+ font-size: 0;
+ list-style: 0;
+}
+
+.services__item {
+  /*max-width: 241px;*/
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width:25%;
+  background-color: #F7F7F7;
+  padding: 55px 25px 80px;
+  min-height: 420px;
+}
+
+.item__img {
+  margin-bottom: 50px;
+  width:67px;
+  height:67px;
+  fill: var(--black);
+}
+
+.services__item:nth-child(2) .item__img {
+  margin-bottom: 40px;
+}
+
+.item__title {
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 21px;
+  font-family: var(--title-font);
+  margin-bottom: 30px;
+}
+
+.item__text {
+  font-size: 14px;
+  text-align:  center;
+  font-family: var(--main-font);
+  color:#777777;
+}
+
+.services__item:hover {
+  background-color: var(--header-title-color);
+  color:var(--white);
+  cursor: pointer;
+}
+
+.services__item:hover .item__title,
+.services__item:hover .item__text {
+  color:var(--white);
+}
+
+.services__item:hover .item__img {
+  fill:var(--white);
+}
