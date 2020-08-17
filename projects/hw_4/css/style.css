@@ -26,6 +26,11 @@ header {
   margin-bottom: 50px;
 }
 
+.logo a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 main {
   margin-bottom: 70px;
 }
