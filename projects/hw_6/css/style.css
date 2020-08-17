@@ -61,20 +61,22 @@ margin-bottom: 35px;
   margin-bottom: 40px;
   text-transform: uppercase;
   font-family: var(--title-font);
-  text-align: right  ;
+  text-align: center;
   letter-spacing: 3px;
 }
 
 .header__text {
   font-size: 18px;
   color: var(--main-color);
-  max-width:513px;
-  padding:0 0px ;
+  /*max-width:513px;
+  width: 100%;*/
+  padding:0 10px ;
   margin: 0 auto;
+  font-weight: 400;
   text-transform: uppercase;
-  text-align: center  ;
-  /*text-align: justify*/;
-  /*letter-spacing: 1px;*/
+  text-align: center;
+  letter-spacing: 1px;
+
   font-family: var(--main-font);
 }
 
@@ -124,6 +126,7 @@ margin-bottom: 35px;
   background-color: var(--header-title-color);
   color:var(--white);
   cursor: pointer;
+  transition: all .1s easy-in;
 }
 
 .services__item:hover .item__title,
