@@ -18,6 +18,10 @@
   margin-right: 100px;
 }
 
+.container .item:last-child {
+  margin-right: 0px;
+}
+
 .border-circle {
   display: inline-block;
   border: 1px solid #2a69a6;
@@ -28,13 +32,14 @@
   transition: background-color .2s ease;
   position: relative;
   text-align: center;
-
+  vertical-align: center;
   margin-bottom: 15px;
 }
 
 .border-circle:hover {
   background-color: white;
 }
+
 .border-circle:hover .icon {
   fill: #2a69a6;
 }
@@ -45,7 +50,11 @@
   position: absolute;
   left: 30%;
   top: 25%;
+}
 
+.fix {
+  left: 30%;
+  top: 29%;
 }
 
 h1 {
