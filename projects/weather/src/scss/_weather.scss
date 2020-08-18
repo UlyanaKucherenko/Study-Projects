@@ -1,40 +1,64 @@
 
 .weather {
   background-color: #3399cc;
-  border: 15px solid #2b81ac;
-  max-width: 1092px;
+  border: 20px solid #2b81ac;
+  max-width: 1083px;
   width: 100%;
-  margin: 0 auto;
-  padding: 25px 150px 92px;
+  margin: 0 auto ;
+  padding: 25px 0  92px;
 
   &__main {
-   
+   max-width: 675px;
+   width: 100%;
+   margin: 0 auto;
   }
   &__title{
     margin-bottom: 20px;
   }
 
   &__table {
-    border: 2px solid #fff;
+    
     list-style: none;
+    border: 2px solid #fff;
     margin-bottom: 20px;
     font-size: 0;
-    
+    background-color: #fff;
+    &:hover {
+     /*background-color:#fff;*/
+      opacity: 0.5;
+    }
   }
 
   &__table__item {
     border: 2px solid #fff;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
     text-align: center;
     padding: 20px 0 25px;
 
-    &__title {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
+   /* &:hover{
+      
+      opacity: 0.8;
+    }*/
 
   }
+
+    &__table__item-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    &__table__item-degree {
+      color: #fff;
+      letter-spacing: 2px;
+
+      .fas {
+        font-size: 25px;
+      }
+    }
 
   &__table__item:first-child {
     width: 50%;
@@ -63,7 +87,7 @@
   }
   &__table__item:nth-child(7) {
     width: 25%;
-  box-flex-group: #99CC99;
+    background-color: #99CC99;
   }
   &__table__item:nth-child(8) {
     width: 25%;
@@ -82,7 +106,6 @@
     width: 100%;
     background-color: #666699;
   }
-
 
 
 }
