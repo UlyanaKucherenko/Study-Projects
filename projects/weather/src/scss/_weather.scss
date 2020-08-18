@@ -23,6 +23,7 @@
     margin-bottom: 20px;
     font-size: 0;
     background-color: #fff;
+    cursor: pointer;
 
     &:hover .weather__table__item {
       opacity: 0.5;
@@ -103,7 +104,7 @@
     width: 50%;
     background-color:#CC6699 ;
   } 
-  
+
   &__table__item:nth-child(10) {
     width: 25%;
     background-color: #339966;
