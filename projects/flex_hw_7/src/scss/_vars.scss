@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@font-face {
+  font-family:"Miso";
+  src:url("../assets/fonts/miso.ttf") format("truetype");
+}
+@font-face {
+  font-family:"Miso-Bold";
+  src:url("../assets/fonts/miso-bold.ttf") format("truetype");
+}
+
+//colors
+$bg-color: #FDDE7E;
+$bg-card: #FFFFFF;
+$money-color: #02995B;
+$text-color: #333333;
+
+// Font-sizes
+$title-size: 57px;
+$money-size: 70px;
+$text-size: 19px;
+
+
+// Fonts
+$money-font: 'Miso-Bold', sans-serif;
+$title-font: 'Miso', sans-serif;
+$text-font: 'Lato', sans-serif;
