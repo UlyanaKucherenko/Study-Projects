@@ -1,39 +1,34 @@
 $style: "articles";
 .#{$style} {
 
+  margin-bottom: 70px;
+
   &__gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    margin-bottom: 70px;
   }
 
   &__gallery__item {
     background-color: $card-color;
-    padding-bottom: 23px;
     max-width: 361px;
     flex-basis: 361px;
     margin-bottom: 19px;
-    position: relative;
     cursor: pointer;
-
+    
    &--large {
     max-width: 740px;
     flex-basis: 740px;
-    
-    background: url(../img/Layer_1.png) ;
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 0;
+    background-color: #A68C57;
+   
+    position: relative;
   }
-}
+ }
 
-    &__gallery-img-wrapper {
-      position: relative;
-      padding-bottom: 69%;
-      margin-bottom: 28px;
+  &__gallery-img-wrapper {
+    position: relative;
+    padding-bottom: 69%;
+    margin-bottom: 28px;
 
       img {
         position: absolute;
@@ -45,10 +40,16 @@ $style: "articles";
         height: 100%;
         object-fit: cover;
       }
+
+    }
+
+   &__gallery-img-wrapper-first {
+     
+      min-height: 100%;
     }
 
     &__gallery-main-wrapper {
-    padding: 0 26px 0 28px;
+    padding: 0px 26px 23px 28px;
 
      &-first {
       padding: 0;
@@ -58,7 +59,7 @@ $style: "articles";
      }
      
      &-not_data { 
-      padding: 34px 26px 0 28px;
+      padding: 34px 26px 23px 28px;
     }
   }
 
