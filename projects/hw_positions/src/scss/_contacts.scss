@@ -73,7 +73,6 @@ margin-bottom: 100px;
     
     .fab {
       display: block;
-      fill: #ffffff;
       font-size:24px;
     }
   }
@@ -87,7 +86,7 @@ margin-bottom: 100px;
     justify-content: center;
     align-items: center;
 
-    background-color: #ffffff;
+    background-color: $bg-link-c;
     opacity: 0.3;
 
     &:hover {
@@ -96,7 +95,7 @@ margin-bottom: 100px;
     }
 
     &:active {
-      background-color: rgb(221, 147, 9);
+      background-color: $bg-active-c; 
     }
     
   }
@@ -112,12 +111,12 @@ margin-bottom: 100px;
   }
   &__name {
 
-    @include text(18px, 600, #282528);
+    @include text(18px, 600, $name-color);
   }
 
   &__position {
 
-    @include text(14px, 400, #646464);
+    @include text(14px, 400, $position-c);
   }
   
 }
