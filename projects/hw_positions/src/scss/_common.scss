@@ -1,0 +1,29 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+  min-width: 100vh;
+  background-color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px  ;
+}

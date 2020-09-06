@@ -1,0 +1,40 @@
+$style:("header");
+.#{$style} {
+
+  padding-top: 108px;
+  padding-bottom: 50px;
+  
+
+  &__content {
+    max-width: 565px;
+    width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__content__title {
+
+    @include text(34px,700, $title-color);
+    letter-spacing: 5.44px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::after {
+      content:"";
+      position: absolute;
+      width:45px;
+      height:4px;
+      background-color:#dddbdb;
+      left: 45.5%;
+      bottom: -20px;
+    }
+
+  }
+
+  &__content__text {
+    @include text(16px,500, $title-color);
+    word-break: break-all;
+  }
+}
