@@ -1,0 +1,134 @@
+$style:("cards");
+.#{$style} {
+
+  max-width: 1200px;
+  width: 100%;
+  min-height: 600px;
+  background-color: $bg-color;
+  min-height: 600px;
+  margin: 0 auto;
+  
+  @include flex(center,center);
+
+  &__list {
+
+    @include flex(space-between,center);
+    max-width: 1140px;
+    width: 100%;
+    
+  }
+
+  &__item {
+    max-width: 360px;
+    width:100%;
+    background-color: $bg-card;
+    border-radius: 1%;
+
+    @include flex(space-between,center,column);
+
+    padding: 27px 0 32px;
+
+   // flex-basis: 33%;
+
+    min-height: 440px;
+    cursor: pointer;
+
+    &:hover{
+      min-height: 500px;
+      padding: 40px 0 50px;
+      transition: all .3s easy-in;
+    }
+
+    &:hover .cards__money{
+      flex-grow: 2;
+      
+    }
+
+    &:hover .cards__wrapper-img{
+      flex-grow: 2;
+
+      &::after {
+        content: url("../img/bean.svg");
+        bottom: 45px;
+        
+        }
+    }
+  }
+
+  &__money{
+    color: $money-color;
+    font-family: $money-font;
+    font-size: $money-size;
+    font-weight: 700;
+    display: block;
+    
+    flex-grow: 1;
+  }
+
+  &__wrapper-img {
+    width:156px;
+    display: block;
+    padding-top: 57px;
+    padding-left: 18px;
+    
+    position: relative;
+    flex-grow: 1.5;
+
+    .img {
+      width:100%;
+    }
+
+    &::before {
+      content: url("../img/smoke_orange.svg");
+      position: absolute;
+      display: inline-block;
+      width: 49px;
+      height: 49px;
+      top: 0px;
+      left: 51px;
+    }
+
+    &--second::before {
+      content: url("../img/smoke_yellow.svg");
+    }
+
+    &--third::before {
+      content: url("../img/smoke_grey.svg");
+    }
+
+    &::after {
+      content: url("../img/bean.svg");
+      opacity: 0.1;
+      position: absolute;
+      display: inline-block;
+      width: 49px;
+      height: 49px;
+      bottom: 36px;
+      left: 60px;
+      }
+  }
+
+  &__title {
+    font-size: $title-size;
+    font-family:'Miso', sans-serif;
+    font-weight: 500;
+    
+    letter-spacing: -1px;
+    text-align: center;
+    flex-grow: 1.5;
+
+  }
+
+  &__descr {
+    font-size: $text-size;
+    font-family: $text-font;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    max-width: 156px;
+    width: 100%;
+    flex-grow: 0.4;
+
+  }
+  
+}
