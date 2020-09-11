@@ -1,0 +1,31 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  background-color: $black;
+  /*background-image: url("../img/main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+.container {
+  width: 800px;
+  max-width: 100%;
+  //padding:108px 15px 100px;
+  padding: 0 15px;
+  @include flex(center,center);
+  margin: 0 auto;
+  min-height: 100vh;
+  background-image: url("../img/main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  list-style: none;
+}

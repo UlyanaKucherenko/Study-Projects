@@ -1,0 +1,213 @@
+.product-card {
+  background-color: $bg-color;
+  width: 687px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 2%;
+  font-family: $base-font;
+
+  &__nuv {
+    display: flex; 
+  }
+
+  &__wrap-logo {
+    width: 65px;
+    @include padding-hack(5.1%, contain, false);
+  }
+
+  &__wrap-cols {
+    display: flex; 
+  }
+
+  &__col {
+   
+    &--gallery {
+      padding: 65px 15px 0px 15px;
+      @include flex(space-between, center, column);
+    }
+  }
+
+  &__radios {
+    display: flex;
+  }
+
+  &__radio {
+    margin-right: 7px;
+    
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__input[type="radio"] {
+    display:none;
+  }
+
+  &__input[type="radio"] + label {
+      color:$white;
+      display: flex;
+      align-items:center;
+      height: 20px;
+  }
+
+  &__input[type="radio"] + label span {
+    display:inline-block;
+    width:10px;
+    height:10px;
+    
+    border-radius: 50%;
+    background-color:$black;
+    cursor:pointer;
+  }
+
+  &__input--second[type="radio"]+ label span {
+    background-color: $white;
+  }
+
+  &__input--third[type="radio"]+ label span {
+    background-color: #ED3333;
+  }
+
+  &__input--fouth[type="radio"]+ label span {
+    background-color: #29E3EA;
+  }
+
+  &__input[type="radio"]:checked + label span {
+
+    border:2px solid $input-check;
+    width:15px;
+    height:15px;
+  }
+
+  &__wrap-img {
+    padding: 35px 15px 0px 15px;
+    width: 329px;
+    @include padding-hack(38%, contain, false);
+  }
+
+  &__info {
+    padding: 20px 38px 55px 60px; 
+  }
+  &__title{
+    @include text(24px, 400, $text-color);
+    font-family: $base-font;
+    margin-bottom: 15px;
+  }
+
+  &__description {
+    @include text(14px, 400, $text-color);
+    font-family: $base-font;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+
+  &__rating-list {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__rating-list-item {
+    margin-right: 4px;
+
+    svg {
+      fill: $star-color;
+    }
+
+    &--grey {
+      svg {
+        fill: grey;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__form-section{
+
+    display: flex;
+    margin-bottom: 30px;
+  }
+  
+  &__select-wrapper {
+
+    margin-right: 2px;
+    width: 70px;
+    max-width:100%;
+    font-size: 100%;
+
+    background-color: $bg-color;
+    @include text(14px, 0, $text-color);
+    font-family: $base-font;
+    font-style: normal;
+    
+    position: relative;
+
+    &::last-child {
+      margin-right: 0;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      pointer-events: none;
+      z-index: 10;
+
+    right: 16px;
+    top: 14px;
+    width: 7px;
+    height: 7px;
+    border: solid #333A45;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    }
+  }
+
+  &__select {
+    appearance: none;
+    width: 70px;
+    max-width:100%;
+    padding: 11px 5px 11px 15px;
+    font-size: 100%;
+
+    background-color: #111A28;
+    @include text(14px, 0, #80848B);
+    font-family: $base-font;
+    font-style: normal;
+    position: relative;
+
+    &:focus{
+      outline:none;
+      }
+  }
+    
+  &__btn {
+    width: 185px;
+    max-width:100%;
+    padding: 15px 0px 15px 0px;
+    background-color: #202835;
+    border: 1px solid #4F5560;
+
+    @include text(14px, 400, #80848B);
+    font-family: $base-font;
+    
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #435a7e;
+    }
+
+    &:focus{
+      outline:none;
+      }
+
+    &:active {
+      background-color: #949697;
+      @include text(14px, 400, #262627);
+    }
+  }
+}
