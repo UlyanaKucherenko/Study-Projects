@@ -1,0 +1,278 @@
+
+$style: "form-section";
+
+.#{$style} {
+    
+    padding:0 15px;
+    min-height: 100vh;
+    @include flex(center, center);
+
+    &__container {
+        max-width: 100%;
+        width: 400px;
+        height: 496px;
+        //height: 100%;
+        background-image: linear-gradient(to top, #3023ae, #c86dd7);
+        
+        position: relative;
+        z-index: 1;
+
+        padding: 55px 70px 55px 69px;
+
+        box-shadow: 0 18px 19px -2px rgba(58, 80, 101, .9);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            background: url("../img/vector-bg.png") no-repeat center;
+            background-size: 100% 100% 100%;
+            z-index: 0;
+
+        }
+
+    }
+
+    &__form {
+       z-index: 1;
+       position: relative;
+       max-width: 100%;
+       width: 400px;
+    }
+
+    &__form-nuv {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction:row;
+    }
+
+    &__item {
+        margin-right: 26px;
+        position: relative;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__link-top {
+        @include text($top-links-size, 700,rgba(251, 246, 228,0.8));
+        letter-spacing: 1px;
+    
+
+        &--active {
+            position: relative;
+            color: rgba(251, 246, 228,1);
+            &:before {
+                content:"";
+                position: absolute;
+                display: block;
+                left:0;
+                bottom:-4px;
+                height:2px;
+                max-width:63px;
+                width: 100%;
+                background-color:$active-link-color;
+            }
+        }
+
+        &:hover {
+            color: rgba(251, 246, 228,1);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px lightskyblue;
+        }
+        
+    }
+
+    &__form-inner {
+        @include flex(flex-start,stretch,column);
+        letter-spacing: 1px;
+    }
+
+    &__form-label {
+        @include text($title-size,700,$text-color);
+        letter-spacing: 1px;
+        margin-bottom: 11px;
+    }
+
+    &__form-input {
+        border: 2px solid rgba(191, 185, 204, 0.5);
+        outline: none;
+        background: none;
+        color:white;
+        padding: 10px;
+        height: 42px;
+       // margin-bottom: 15px;
+
+        
+
+        &:focus {
+            border-color: $btn-color;
+        }
+
+      position: relative;
+    }
+
+    &__form-error {
+        color:red;
+        font-size: 12px;
+        visibility: hidden;
+        margin-bottom: 3px;
+
+        &--end-element {
+            margin-bottom: 15px;
+        }
+        
+    }
+    &__form-input:invalid+&__form-error {
+        visibility: visible;
+    }
+
+    &__wrap-checkbox {
+        margin-bottom: 40px;
+    }
+
+    input[type=checkbox] {
+        
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        opacity: 0;
+
+        //display:none;
+    }
+
+    &__checkbox-fake {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        
+        background-color: $btn-color;
+        margin-right: 10px;
+      
+        position: relative;
+
+        &::before {
+            content:"";
+            position: absolute;
+          
+            display: inline-block;
+            opacity: 0;
+            transition: all .1s easy-in;
+          
+            left: 6px;
+            top: 3px;
+            width: 3px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px lightskyblue;
+        }
+
+        &:active {
+            background-color: $active-link-color;
+        }
+
+      }
+
+    input[type= checkbox]:checked + label > &__checkbox-fake::before {
+        opacity: 1;
+      } 
+
+    input[type= checkbox]:focus+&__label-checkbox &__checkbox-fake {
+        box-shadow: 0 0 0 1px $active-link-color;
+      } 
+      
+    input[type=checkbox] + label {
+        display: flex;
+        align-items:center;
+        height: 16px;
+        }
+
+    &__checkbox-text {
+        @include text($check-text-size,700,$text-color);
+        letter-spacing: 1px;
+    }
+
+    &__btn {
+        height:42px;
+        @include text(18px,700,#FBF6E4);
+        letter-spacing: 1px;
+        background-color:$btn-color;
+        border: none;
+
+        margin-bottom: 33px;
+       
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px lightskyblue;
+        }
+        
+        &:hover{
+            opacity: 0.8;
+        }
+        &:active {
+            background-color:$active-link-color;
+            opacity: 1;
+        }
+        
+    }
+
+    &__menu-links {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    &__item-links {
+       // margin-right: 33px;
+    }
+
+    &__link {
+        @include text($bottom-links-size,400,$bottom-links-color);
+        letter-spacing: 1px;
+        position: relative;
+        opacity: 0.8;
+        &:before {
+            content:"";
+            position: absolute;
+            display: block;
+            left:0;
+            bottom:-5px;
+            height:1px;
+            //max-width:60px;
+            width: 100%;
+            background-color:rgba(227, 227, 250, 0.3);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px lightskyblue;
+        }
+        &:hover {
+            opacity: 1;
+            color:$text-color;
+
+            &:before {
+                bottom:-8px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Form Sing in</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/favicon.ico">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="form-section">
+		<div class="form-section__container">
+			
+			<form class="form-section__form" action="#" method="get" name="created_form">
+				<div class="form-section__form-nuv">
+					<ul class="form-section__menu">
+						<li class="form-section__item">
+							<a class="form-section__link-top form-section__link-top--active" href="/">Sign in</a>
+						</li>
+						<li class="form-section__ltem">
+							<a class="form-section__link-top" href="./join-us.html">Join us</a>
+						</li>
+					</ul>
+				</div>
+				<div class="form-section__form-inner">
+					<label class="form-section__form-label" for="username">Username</label>
+					<input class="form-section__form-input" id="username" type="text" minlength="3">
+					<div class="form-section__form-error">error</div>
+
+					<label class="form-section__form-label" for="password">Password</label>
+					<input class="form-section__form-input" id="password" type="password" required>
+					<div class="form-section__form-error">error</div>
+
+					<div class="form-section__wrap-checkbox">
+						<input  checked type="checkbox" name="" id="checkbox">
+						<label class="form-section__label-checkbox" for="checkbox">
+							<span class="form-section__checkbox-fake"></span>
+							<span class="form-section__checkbox-text">Keep me signed in</span>
+						</label>
+					</div>
+					
+					<button class="form-section__btn" type="submit">Sign in</button>
+					<div class="form-section__wrap-links">
+						<ul class="form-section__menu-links">
+							<li class="form-section__item-links">
+								<a class="form-section__link" href="#">Forgot password</a>
+							</li>
+							<li class="form-section__item-links">
+								<a class="form-section__link" href="#">Create an account</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script src="js/bundle.js"></script>
+</body>
+</html>

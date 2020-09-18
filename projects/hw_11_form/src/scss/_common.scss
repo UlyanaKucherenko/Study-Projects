@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vh;
+    font-size: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}*/
