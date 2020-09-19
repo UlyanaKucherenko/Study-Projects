@@ -10,10 +10,11 @@ $style: "form-section";
     &__container {
         max-width: 100%;
         width: 400px;
-        height: 496px;
+       // height: 496px;
         //height: 100%;
-        background-image: linear-gradient(to top, #3023ae, #c86dd7);
-        
+      //  background-image: linear-gradient(to top, #3023ae, #c86dd7);
+        background: url("../img/bg-modal.jpg") no-repeat center;
+        background-size: cover;
         position: relative;
         z-index: 1;
 
@@ -29,8 +30,10 @@ $style: "form-section";
             left: 0;
             right: 0;
             display: block;
-            background: url("../img/vector-bg.png") no-repeat center;
-            background-size: 100% 100% 100%;
+            //background: url("../img/bg-modal.jpg") no-repeat center;
+            background-image: linear-gradient(to top, #3023ae, #c86dd7);
+           // background-size: 100% 100% 100%;
+           opacity: 0.8;
             z-index: 0;
 
         }
@@ -38,11 +41,12 @@ $style: "form-section";
     }
 
     &__form {
-       z-index: 1;
-       position: relative;
-       max-width: 100%;
-       width: 400px;
-    }
+         z-index: 1;
+         position: relative;
+         max-width: 100%;
+         width: 400px;
+      }
+   
 
     &__form-nuv {
         width: 100%;
@@ -84,17 +88,15 @@ $style: "form-section";
             }
         }
 
+
         &:hover {
             color: rgba(251, 246, 228,1);
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: 0 0 0 1px lightskyblue;
         }
         
     }
 
+
+   
     &__form-inner {
         @include flex(flex-start,stretch,column);
         letter-spacing: 1px;
@@ -181,10 +183,10 @@ $style: "form-section";
             transform: rotate(45deg);
           }
 
-        &:focus {
+        /*&:focus {
             outline: none;
-            box-shadow: 0 0 0 1px lightskyblue;
-        }
+            box-shadow: 0 0 0 1px $active-link-color;
+        }*/
 
         &:active {
             background-color: $active-link-color;
@@ -220,10 +222,14 @@ $style: "form-section";
         cursor: pointer;
 
         margin-bottom: 33px;
+
+        &--join {
+            margin-bottom: 0;
+        }
        
         &:focus {
             outline: none;
-            box-shadow: 0 0 0 1px lightskyblue;
+            box-shadow: 0 0 0 1px $active-link-color;
         }
         
         &:hover{
@@ -262,10 +268,7 @@ $style: "form-section";
             background-color:rgba(227, 227, 250, 0.3);
         }
 
-        &:focus {
-            outline: none;
-            box-shadow: 0 0 0 1px lightskyblue;
-        }
+        
         &:hover {
             opacity: 1;
             color:$text-color;
@@ -277,3 +280,4 @@ $style: "form-section";
 
     }
 }
+
