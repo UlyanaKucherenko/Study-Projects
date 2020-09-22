@@ -1,0 +1,28 @@
+$style:"header";
+
+.#{$style} {
+
+    background-color:#A9B4C9;
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url("../img/hero-bg.png") no-repeat center;
+      background-size: cover;
+      z-index: 0;
+    }
+
+    &__container {
+        padding: 280px 0;
+        position: relative;
+        z-index: 1;
+        @include flex(flex-start, center, column);
+      }
+}
