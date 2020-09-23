@@ -10,3 +10,12 @@ body {
     min-height: 100vh;
 }
 
+.container {
+    //padding: 285px 0px 115px;   
+        position: relative;
+        z-index: 1;
+        @include flex(flex-start, center, column);
+        width: 100%;
+        max-width: 902px;
+        margin: 0 auto;
+}

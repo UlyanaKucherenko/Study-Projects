@@ -20,9 +20,70 @@ $style:"header";
     }
 
     &__container {
-        padding: 280px 0;
-        position: relative;
-        z-index: 1;
-        @include flex(flex-start, center, column);
+        padding: 285px 0px 115px;
+
       }
+    
+    &__content {
+      padding: 0px 155px;
+      //padding: 285px 155px 155px 115px;
+      text-align: center;
+      @include flex(center, center, column);
+      position: relative;
+    }  
+
+    &__logo {
+      display: block;
+      max-width: 60px;
+      width: 100%;
+      @include padding-hack (11%, contain, false) ;
+
+      margin-bottom: 96px;
+    }
+
+    &__title {
+      @include text(54px,400,$white);
+      letter-spacing: 8px;
+      line-height: normal;
+      text-transform: uppercase;
+      max-width: 591px;
+      width: 100%;
+      font-family: $main-font;
+
+      margin-bottom: 53px;
+      span {
+        display: block;
+      }
+    }
+
+    &__text {
+      @include text(15px,400,$white);
+      letter-spacing: 1px;
+      line-height: 1.93;
+      text-transform: uppercase;
+      font-family: $main-font;
+
+      margin-bottom: 245px;
+
+      span {
+        display: block;
+      }
+    }
+
+    &__scroll {
+      position: absolute;
+      //bottom: -245px;
+      bottom:0;
+      left: 50%;
+      display: block;
+      max-width: 23px;
+      width: 100%;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+      
+
+    }
 }
