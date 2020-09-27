@@ -1,15 +1,14 @@
-$style:"about-us";
+$style:"contact-us";
 
 .#{$style} {
 
 
     &__container {
-        padding: 146px 0px 159px 0px ;
-
+        padding: 134px 0px 70px 0px;
       }
     
     &__content {
-      padding: 0px 171px  29px 178px;
+      padding: 0px 178px  29px 178px;
       text-align: center;
       @include flex(center, center, column);
       position: relative;
@@ -41,10 +40,9 @@ $style:"about-us";
         background-color: $black;
         top: -1px;
         right: -2px;
-    }
+        }
     
     }  
-
 
     &__title {
 
@@ -82,6 +80,34 @@ $style:"about-us";
       span {
         display: block;
       }
+
+      margin-bottom: 42px;
+    }
+
+    &__btn {
+        @include text(16px,300,$white);
+        text-align: center;
+        text-transform: uppercase;
+        min-height: 58px;
+        background-color: $black;
+        max-width: 395px;
+        width: 100%;
+        cursor: pointer;
+        border: 2px solid $black;
+
+        &:active, 
+        &:focus { 
+         outline: none !important; 
+        } 
+
+        &:hover {
+            background-color: rgba($black, 0.8);
+            transition: all .2s ease-in;
+        }
+        &:active{
+            background-color: #ee855f;
+        }
+
     }
       
 

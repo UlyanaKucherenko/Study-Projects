@@ -1,0 +1,32 @@
+$style:"footer";
+
+.#{$style} {
+
+
+    &__container {
+        padding: 0px ;
+
+      }
+    
+      &__content {
+        padding: 0px 155px;
+        
+        text-align: center;
+        @include flex(center, center, row);
+        position: relative;
+        min-height: 36px;
+      }  
+
+      &__logo {
+          margin-right: 38px;
+      }
+
+      &__text {
+          @include text(14px, 400,$black);
+      }
+
+
+
+      
+
+}

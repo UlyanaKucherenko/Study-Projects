@@ -1,15 +1,14 @@
-$style:"about-us";
+$style:"what-we-do";
 
 .#{$style} {
 
 
     &__container {
-        padding: 146px 0px 159px 0px ;
-
+        padding: 105px 0px 114px 0;
       }
     
     &__content {
-      padding: 0px 171px  29px 178px;
+      padding: 0px 173px  92px 180px;
       text-align: center;
       @include flex(center, center, column);
       position: relative;
@@ -45,7 +44,6 @@ $style:"about-us";
     
     }  
 
-
     &__title {
 
         //margin-bottom: 65px;
@@ -68,6 +66,35 @@ $style:"about-us";
       }
     }
 
+    &__list-item {
+      margin-bottom: 110px;
+
+      &:last-child{
+        margin-bottom: 0px;
+      }
+    }
+
+    &__icone {
+      margin-bottom: 39px;
+      display: inline-block;
+
+      .icone {
+        width:100%;
+        height:100%;
+        path{
+          fill:$black;
+        }
+        
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 37px;
+      @include text(20px,700,$black);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
     &__text {
       @include text(16px,300,$black);
       line-height: 1.5;
@@ -82,6 +109,7 @@ $style:"about-us";
       span {
         display: block;
       }
+
     }
       
 
