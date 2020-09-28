@@ -1,0 +1,257 @@
+$style: "our-team";
+.#{$style} {
+ 
+    padding: 112px 0 94px 0;
+
+  &__container {
+    
+    @include flex(flex-start, center, column);
+  }
+
+  &__subtitle {
+    font-family: $sec-font;
+    @include text(18px, 500, $grey-middle);
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 18px;
+  }
+  &__title {
+    font-family: $main-font;
+    @include text(60px, 900, $yellow);
+    margin-bottom: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: normal;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 45px;
+   
+  }
+   
+  &__decorator {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 39px;
+
+      &:before,
+      &:after {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 210px;
+      background-color: $yellow;
+      position: absolute;
+      top: 50%;
+      }
+      &:before{
+        left: -7px;
+        transform: translateY(-50%) translateX(-100%);
+      }
+
+      &:after{
+        right: -7px;
+        transform: translateY(-50%) translateX(100%);
+      }
+       
+    }
+
+    &__slider-wrapper{
+        position: relative;
+        &--decor {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            max-height: 560px;
+            width: 1px;
+            background-color: $yellow;
+            top:50%;
+
+        }
+    }
+
+    &__wrapper-cols {
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+   &__wrapper-col {
+       width: 50%;
+       text-align: center;
+
+       &--right {
+           border-left: 1px solid $yellow ;
+           padding: 90px 61px 104px 80px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+       }
+
+       &--left {
+        padding: 76px 97px 104px 0px;
+        
+    }
+   }
+
+   //----------- left-col
+
+   &__wrapper-image{
+       border: 1px solid $yellow;
+       padding: 12px;
+   }
+   &__image-border{
+    border: 1px solid $yellow;
+    //max-width: 388px;
+    max-height: 338px;
+    @include padding-hack( 100%, cover);
+
+   }
+
+   //----------- right-col
+
+   &__name {
+       @include text(36px, 900,$grey);
+       margin-bottom: 68px;
+       letter-spacing:0.5px;
+       position: relative;
+
+       &:before {
+        position: absolute;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        width: 100px;
+        bottom: -34px;
+        left: 29%;
+        max-width: 100%;
+        background-color: $yellow;
+
+       }
+   }
+
+   &__position {
+    @include text(24px, 400,$grey);
+
+    font-family: $sec-font;
+    line-height: 1.5;
+    margin-bottom: 29px;
+    }
+
+    &__social-madia {
+       margin-bottom: 30px;
+
+    }
+
+    &__list {
+        display: flex;
+        //justify-content: space-around;
+    }
+
+    &__item {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+       border: 2px solid $grey-light;
+       border-radius: 50%;
+       margin-right: 5px;
+
+       &:last-child {
+           margin-right: 0;
+       }
+       
+    }
+
+    &__link-social {
+        .fab {
+            color:$grey-light;
+            size:5px;
+        }
+
+    }
+
+
+    &__item:hover {
+        border-color: rgba($yellow , 1);
+        transition: all .3s ease-in;
+
+    }
+
+    &__item:hover &__link-social{
+        .fab {
+            color:$yellow;
+            transition: all .3s ease-in;
+        }
+
+    }
+
+    &__text {
+        @include text(14px, 500,$grey);
+        font-family: $sec-font;
+        line-height: 1.7;
+        margin-bottom: 58px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            height: 4px;
+            max-width: 40px;
+            border-bottom: 1px dashed $yellow;
+            border-bottom-width: 4px;
+            bottom: -20px;
+            left: 46%;
+            width: 100%;
+            
+    
+           }
+           &::after {
+            position: absolute;
+            content: "";
+            display: inline-block;
+            height: 4px;
+            max-width: 10px;
+            border-bottom: 1px dashed $yellow;
+            border-bottom-width: 4px;
+            bottom: -20px;
+            left: 49%;
+            width: 100%;
+    
+           }
+        }
+    
+
+    &__link-profile{
+        border: 1px solid $yellow;
+        min-height: 25px;
+        @include text(14px, 700,$grey);
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        max-width: 120px;
+        width: 30%;
+        margin: 0 auto;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+            color: $white;
+            background-color: rgba($yellow , 0.5);
+            transition: all .3s ease-in;
+        }
+
+        &:active {
+            color: $white;
+            background-color: rgba($grey-light, 1);
+            transition: all .1s ease-in;
+        }
+
+    }
+      
+}
+
+   
