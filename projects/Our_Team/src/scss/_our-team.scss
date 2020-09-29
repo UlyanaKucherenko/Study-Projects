@@ -1,25 +1,27 @@
 $style: "our-team";
 .#{$style} {
  
-    padding: 112px 0 94px 0;
+    padding: 110px 0 94px 0;
 
   &__container {
-    
     @include flex(flex-start, center, column);
   }
 
   &__subtitle {
     font-family: $sec-font;
-    @include text(18px, 500, $grey-middle);
+    @include text($subtitle-size, 500, $grey-middle);
     text-transform: uppercase;
     padding: 0;
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+
+    line-height: 1.33;
+  letter-spacing: 0.36px;
   }
   &__title {
     font-family: $main-font;
-    @include text(60px, 900, $yellow);
-    margin-bottom: 45px;
+    @include text($title-size, 900, $yellow);
+   
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
@@ -58,20 +60,50 @@ $style: "our-team";
        
     }
 
-    &__slider-wrapper{
-        position: relative;
-        &--decor {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            max-height: 560px;
-            width: 1px;
-            background-color: $yellow;
-            top:50%;
-
+    // ---------------- slider
+          //------------------ переключатели
+          &__arrow {
+            svg {
+               color:$yellow;
+            }
+          
         }
-    }
+        &__bullets {
+          list-style: none;
+          height: 20px;
+          @include flex(center, center);
+          li {
+            width:10px;
+            height: 10px;
+            border: 1px solid $yellow;
+            border-radius: 50%;
+            background-color: $yellow;
+            margin-right: 9px;
+            cursor: pointer;
+            &:last-child {
+              margin-right: 0;
+            }
+            &.uk-active {
+              background-color: $white;
+            }
+          }
+        }
 
+    &__slider-wrapper {
+        position: relative;
+      }
+      &__slider {
+        position: relative;
+      }
+
+      &__content-slider {
+          margin-bottom: 40px;
+      }
+
+      &__slider-item {
+        position: relative;
+      }
+     //------------------ 
     &__wrapper-cols {
         display: flex;
         flex-wrap: nowrap;
@@ -83,24 +115,74 @@ $style: "our-team";
 
        &--right {
            border-left: 1px solid $yellow ;
-           padding: 90px 61px 104px 80px;
+           padding: 90px 64px 104px 80px;
            display: flex;
            flex-direction: column;
            align-items: center;
        }
 
        &--left {
-        padding: 76px 97px 104px 0px;
-        
+        padding: 76px 80px 104px 64px;
     }
    }
 
    //----------- left-col
 
    &__wrapper-image{
-       border: 1px solid $yellow;
+      // border: 1px solid $yellow;
        padding: 12px;
+       position: relative;
+
+
+        &:before,
+        &:after {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        content: '';
+        border-color: $yellow;
+        border-style: solid;
+        }
+
+        &:before {
+        left: 0px;
+        top: 0px;
+        border-width: 1px 0 0 1px;
+        }
+
+        &:after {
+        right: 0px;
+        top: 0px;
+        border-width: 1px 1px 0 0;
+        }
+
    }
+
+   &__wrapper-image--decore {
+
+    &:before,
+    &:after {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    content: '';
+    border-color:$yellow;
+    border-style: solid;
+    }
+
+    &:before {
+        left: 0px;
+        bottom: 0px;
+        border-width: 0px  0px 1px 1px;
+        }
+
+        &:after {
+        right: 0px;
+        bottom: 0px;
+        border-width: 0px 1px 1px 0;
+        }
+}
+
    &__image-border{
     border: 1px solid $yellow;
     //max-width: 388px;
@@ -112,7 +194,7 @@ $style: "our-team";
    //----------- right-col
 
    &__name {
-       @include text(36px, 900,$grey);
+       @include text($name-size, 900,$grey);
        margin-bottom: 68px;
        letter-spacing:0.5px;
        position: relative;
@@ -127,12 +209,11 @@ $style: "our-team";
         left: 29%;
         max-width: 100%;
         background-color: $yellow;
-
        }
    }
 
    &__position {
-    @include text(24px, 400,$grey);
+    @include text($position-size, 400,$grey);
 
     font-family: $sec-font;
     line-height: 1.5;
@@ -141,12 +222,10 @@ $style: "our-team";
 
     &__social-madia {
        margin-bottom: 30px;
-
     }
 
     &__list {
         display: flex;
-        //justify-content: space-around;
     }
 
     &__item {
@@ -162,23 +241,19 @@ $style: "our-team";
 
        &:last-child {
            margin-right: 0;
-       }
-       
+       }  
     }
 
     &__link-social {
         .fab {
             color:$grey-light;
-            size:5px;
+            size:4px;
         }
-
     }
-
 
     &__item:hover {
         border-color: rgba($yellow , 1);
         transition: all .3s ease-in;
-
     }
 
     &__item:hover &__link-social{
@@ -186,11 +261,10 @@ $style: "our-team";
             color:$yellow;
             transition: all .3s ease-in;
         }
-
     }
 
     &__text {
-        @include text(14px, 500,$grey);
+        @include text($text-size, 500,$grey);
         font-family: $sec-font;
         line-height: 1.7;
         margin-bottom: 58px;
@@ -208,7 +282,6 @@ $style: "our-team";
             left: 46%;
             width: 100%;
             
-    
            }
            &::after {
             position: absolute;
@@ -229,7 +302,7 @@ $style: "our-team";
     &__link-profile{
         border: 1px solid $yellow;
         min-height: 25px;
-        @include text(14px, 700,$grey);
+        @include text($text-size, 700,$grey);
         display: flex;
         justify-content:center;
         align-items: center;
@@ -249,9 +322,6 @@ $style: "our-team";
             background-color: rgba($grey-light, 1);
             transition: all .1s ease-in;
         }
-
     }
-      
+    
 }
-
-   

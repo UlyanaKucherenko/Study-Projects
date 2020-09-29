@@ -8,16 +8,13 @@ $yellow: #ffcc00;
 
 
 // Font sizes
-@function calcRem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
-  }
 
-$title-size: calcRem(96px);
-$menu-size: calcRem(48px);
-$big-size: calcRem(36px);
-$small-size: calcRem(24px);
-$small-size-mobile: calcRem(20px);
+
+$title-size: 60px;
+$subtitle-size: 18px;
+$name-size: 36px;
+$position-size: 24px;
+$text-size: 14px;
 
 // Font-family
 
