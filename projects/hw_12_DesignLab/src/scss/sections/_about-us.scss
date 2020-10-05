@@ -4,8 +4,7 @@ $style:"about-us";
 
 
     &__container {
-        padding: 146px 0px 159px 0px ;
-
+        padding: 146px 15px 159px ;
       }
     
     &__content {
@@ -17,34 +16,37 @@ $style:"about-us";
       border: 2px solid $black;
       border-top: none;
 
-      &::before {
-          content:"";
-          display: inline-block;
-          position: absolute;
-
-          max-width: 244px;
-          width:25%;
-          height: 2px;
-          background-color: $black;
-          top:-1px;
-          left:-2px;
-      }
-
+      &::before,
       &::after {
         content:"";
         display: inline-block;
         position: absolute;
 
         max-width: 244px;
-        width: 25%;
+        width:25%;
         height: 2px;
         background-color: $black;
+
+        @media screen and (max-width: 499px) {  
+            width:20%;
+        }
+      }
+
+      &::before {
+          
+          top:-1px;
+          left:-2px;
+      }
+      &::after {
         top: -1px;
         right: -2px;
     }
+
+    @media screen and (max-width: 889px) {
+      padding: 0px 30px  29px 30px;
+    }
     
     }  
-
 
     &__title {
 
@@ -58,14 +60,19 @@ $style:"about-us";
       line-height: normal;
       text-transform: uppercase;
       max-width: 414px;
-      width: 100%;
+      width: 70%;
       
       font-family: $main-font;
-
       //margin-bottom: 53px;
       span {
         display: block;
       }
+
+      @media screen and (max-width: 599px) {
+        top: -16px;
+        font-size: 25px;
+      }
+      
     }
 
     &__text {

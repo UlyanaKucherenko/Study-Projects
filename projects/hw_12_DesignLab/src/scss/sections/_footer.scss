@@ -4,7 +4,7 @@ $style:"footer";
 
 
     &__container {
-        padding: 63px 0 74px ;
+        padding: 63px 15px 74px ;
 
       }
     
@@ -15,14 +15,23 @@ $style:"footer";
         @include flex(center, center, row);
         position: relative;
         min-height: 36px;
+
+        @media screen and (max-width: 580px) {
+          @include flex(center, center, column);
+        }
       }  
 
       &__logo {
           margin-right: 38px;
+          @media screen and (max-width: 580px) {
+            margin-right: 0px;
+            margin-bottom: 10px;
+          }
       }
 
       &__text {
           @include text(14px, 400,$black);
+         
       }
 
 
