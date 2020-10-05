@@ -24,8 +24,12 @@ $style:"header";
         padding: 285px 15px 115px;
        // padding: 115px 0px 115px;
 
+       @media screen and (max-width: 1366px) {
+        padding: 100px 15px 85px;
+      }
+
        @media screen and (max-width: 599px) {
-        padding: 85px 15px 85px;
+        padding: 85px 15px 115px;
       }
 
       }
@@ -86,7 +90,11 @@ $style:"header";
       span {
         display: block;
       }
-      
+
+      @media screen and (max-width: 1366px) {
+        margin-bottom: 200px;
+      }
+
       @media screen and (max-width: 414px) {
         margin-bottom: 150px;
         font-size: 14px;
