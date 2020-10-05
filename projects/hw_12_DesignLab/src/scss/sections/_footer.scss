@@ -18,6 +18,7 @@ $style:"footer";
 
         @media screen and (max-width: 580px) {
           @include flex(center, center, column);
+          padding: 0px 30px;
         }
       }  
 
