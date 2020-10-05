@@ -22,6 +22,9 @@ $style:"services";
     &__container {
         padding: 115px 15px 139px ;
 
+        @media screen and (max-width: 599px) {
+          padding: 85px 15px 85px;
+        }
       }
     
     &__content {

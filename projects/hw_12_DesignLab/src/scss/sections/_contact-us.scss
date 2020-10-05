@@ -4,7 +4,11 @@ $style:"contact-us";
 
 
     &__container {
-        padding: 134px 15px 0px;
+        padding: 134px 15px 63px;
+
+        @media screen and (max-width: 599px) {
+          padding: 85px 15px 63px;
+        }
       }
     
     &__content {

@@ -4,7 +4,11 @@ $style:"footer";
 
 
     &__container {
-        padding: 63px 15px 74px ;
+        padding: 0px 15px 74px ;
+
+        @media screen and (max-width: 599px) {
+          padding:0px 15px 40px;
+        }
 
       }
     

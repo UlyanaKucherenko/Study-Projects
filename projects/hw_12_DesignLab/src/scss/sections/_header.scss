@@ -20,8 +20,14 @@ $style:"header";
     }
 
     &__container {
+    
         padding: 285px 15px 115px;
        // padding: 115px 0px 115px;
+
+       @media screen and (max-width: 599px) {
+        padding: 85px 15px 85px;
+      }
+
       }
     
     &__content {
@@ -32,7 +38,7 @@ $style:"header";
       position: relative;
 
       @media screen and (max-width: 889px) {
-        padding: 0px 30px ;
+        padding: 0px 0px ;
       }
     }  
 
@@ -62,6 +68,10 @@ $style:"header";
       span {
         display: block;
       }
+      @media screen and (max-width: 414px) {
+        
+        font-size: 40px;
+      }
     }
 
     &__text {
@@ -75,6 +85,11 @@ $style:"header";
 
       span {
         display: block;
+      }
+      
+      @media screen and (max-width: 414px) {
+        margin-bottom: 150px;
+        font-size: 14px;
       }
     }
 

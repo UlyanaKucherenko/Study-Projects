@@ -5,6 +5,9 @@ $style:"what-we-do";
 
     &__container {
         padding: 105px 15px 114px;
+        @media screen and (max-width: 599px) {
+          padding: 85px 15px 85px;
+        }
       }
     
     &__content {
