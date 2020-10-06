@@ -71,6 +71,15 @@ $style:"our-works";
         &--large {
             @include padding-hack(30%,  cover);
         }
+
+        @include media( $screen-tablet-small) {
+            &--large {
+                @include padding-hack(43%,  cover);
+            }
+           
+        }
+
+
     }
 
     &__wrap-text{
