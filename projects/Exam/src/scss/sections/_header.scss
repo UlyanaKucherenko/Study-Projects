@@ -164,10 +164,13 @@ $style:"header";
         position: absolute;
         bottom: 0;
         width: 100%;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
       }
 
      &__navigation-container {
-      padding: 28px 15px 32px;
+      padding: 10px 15px 10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
