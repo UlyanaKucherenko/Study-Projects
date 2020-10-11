@@ -1,0 +1,87 @@
+$style:"grand-spain-madrid";
+
+.#{$style} {
+
+    background-color: rgb(110, 122, 233);
+
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url("../img/grand-spain-madrid-bg-1.png") no-repeat center;
+      background-size: cover;
+      z-index: 0;
+    }
+    &--right {
+        background-color: rgb(55, 58, 82);
+
+        position: relative;
+        z-index: 1;
+        
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          background: url("../img/grand-spain-madrid-bg-2.png") no-repeat center;
+          background-size: cover;
+          z-index: 0;
+        }
+    }
+   
+      &__container {
+  
+         padding: 0px 15px 100px;
+         min-height: 700px;
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-start;
+         height: 500px;
+
+         &--right {
+          justify-content: flex-end;
+         }
+
+      }
+
+      &__content {
+          width: 100%;
+          max-width: 540px;
+          background-color: rgba(15, 16, 26,0.8);
+          padding: 50px 32px 50px 30px;
+      }
+
+      &__country {
+        @include text(17px,300,#ffffff);
+        margin-bottom: 20px;
+      }
+
+      &__title {
+        @include text(30px,900,#ffffff);
+        text-transform: uppercase;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.42;
+        letter-spacing: normal;
+        margin-bottom: 34px;
+        text-align: left;
+      }
+
+      &__text {
+        @include text(17px,300,#ffffff);
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: normal;
+        margin-bottom: 48px;
+    }
+}

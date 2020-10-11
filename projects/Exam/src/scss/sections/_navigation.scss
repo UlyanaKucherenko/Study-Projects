@@ -1,0 +1,35 @@
+$style:"navigation";
+
+.#{$style} {
+
+    background-color: rgb(110, 122, 233);
+   
+      &__container {
+  
+         padding: 30px 15px;
+
+         display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+
+      &__logo {
+          display: block;
+      }
+
+      &__menu {
+          display: flex;
+          align-items: center;
+      }
+
+      &__menu-item {
+        margin-right: 30px;
+
+        color: #ffffff;
+        text-align: center;
+
+          &:last-child {
+              margin-right: 0;
+          }
+      }
+}

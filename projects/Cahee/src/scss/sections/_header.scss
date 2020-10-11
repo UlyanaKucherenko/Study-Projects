@@ -1,0 +1,79 @@
+$style:"header";
+
+.#{$style} {
+
+    background-color: $white;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: url("../img/header-bg.png") no-repeat center;
+        background-size: cover;
+        z-index: 0;
+      }
+
+      &__container {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+  
+         min-height: 100vh;
+      }
+
+      &__content {
+        position: relative;
+       
+      }  
+
+      &__title {
+        @include text(60px,900,#262626);
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.42;
+        letter-spacing: normal;
+        margin-bottom: 34px;
+        text-align: left;
+      }
+
+      &__text {
+        @include text(17px,300,#262626);
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: normal;
+        max-width: 370px;
+        margin-bottom: 31px;
+      }
+
+      &__scroll {
+
+        position: absolute;
+        bottom: 68px;
+        left: 50%;
+        display: inline-block;
+       
+        cursor: pointer;
+        
+        .scroll{
+          width:100%;
+          height:100%;
+          path{
+            fill:#262626;
+          }
+        
+        }
+        .scroll:hover {
+          path{
+            fill:#ee855f;
+          }
+        }
+      }
+}

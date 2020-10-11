@@ -1,0 +1,44 @@
+$style:"about-us";
+
+.#{$style} {
+   
+   // height: 100vh;
+
+    background: #00c4c4 url("../img/aboutus-bg.png") no-repeat center left 90px /566px ;
+
+    &__container {
+        
+        padding: 70px 0;
+        display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         justify-content: center;
+
+         min-height: 700px;
+    }  
+    
+
+
+    &__title {
+        @include text(90px, 700, $white);
+        font-style: normal;
+        line-height: 0.3;
+        letter-spacing: normal;
+        text-align: left;
+        margin-bottom: 34px;
+    }
+
+    &__text {
+        @include text(17px, 300, $white);
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: normal;
+        text-align: left;
+        margin-bottom: 10px;
+        max-width: 499px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

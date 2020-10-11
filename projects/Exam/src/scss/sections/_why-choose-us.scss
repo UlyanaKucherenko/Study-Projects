@@ -1,0 +1,102 @@
+$style:"why-choose-us";
+
+.#{$style} {
+
+    background-color: grey;
+
+    position: relative;
+    z-index: 1;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: url("../img/why-choose-us-bg.png") no-repeat center;
+      background-size: cover;
+      z-index: 0;
+    }
+   
+      &__container {
+        min-height: 700px;
+         padding: 0px 15px;
+         @include flex(center,center);
+      }
+
+      &__cols {
+          display: flex;
+          
+
+      }
+
+      &__col {
+          width: 50%;
+          &--left {
+              padding: 60px 50px 0px 0px;
+          }
+
+          &--right {
+            padding-left: 90px;
+            //display: flex;
+            //justify-content: flex-start;
+        }
+      }
+
+      &__wrapper-images {
+        display: flex;
+        flex-direction: column;
+        //align-items: flex-end;
+      }
+
+      &__wrapper-image-row {
+        display: flex;
+        //flex-direction: column;
+        justify-content: flex-start;
+
+        &--down {
+          justify-content: flex-end;
+        }
+      }
+       
+      &__image {
+          max-width: 350px;
+          width: 100%;
+           @include padding-hack(45%,cover);
+
+           //margin-right: auto;
+           margin-bottom: 10px;
+
+       }
+
+      &__title {
+        @include text(30px,900,#ffffff);
+        text-transform: uppercase;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.42;
+        letter-spacing: normal;
+        margin-bottom: 34px;
+        text-align: left;
+      }
+
+      &__wrap-text{
+        margin-bottom: 48px;
+      }
+
+      &__text{
+        @include text(17px,300,#ffffff);
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: normal;
+        //max-width: 370px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+      }
+
+      
+}

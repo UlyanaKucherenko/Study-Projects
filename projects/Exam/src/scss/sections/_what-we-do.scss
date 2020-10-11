@@ -1,0 +1,40 @@
+$style:"what-we-do";
+
+.#{$style} {
+
+    background-color: $dark-grey;
+   
+      &__container {
+  
+         padding: 100px 15px 119px;
+      }
+
+      &__list {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          color: #ffffff;
+          text-align: center;
+      }
+
+      &__icon {
+          
+          display: inline-block;
+          margin-bottom: 34px;
+          font-size: 40px;
+      }
+
+      &__text {
+        font-family: $aleo;
+        @include text(36px,400,$light-grey);
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.72;
+        letter-spacing: normal;
+        text-align: center;
+        
+      }
+
+      
+}
