@@ -4,17 +4,19 @@ $style:"about-us";
    
    // height: 100vh;
 
-    background: #00c4c4 url("../img/aboutus-bg.png") no-repeat center left 90px /566px ;
+    background: #00c4c4 url("../img/aboutus-bg.png") no-repeat center left 90px  ;
+    position: relative;
+    z-index:0;
 
     &__container {
         
-        padding: 70px 0;
         display: flex;
          flex-direction: column;
          align-items: flex-end;
          justify-content: center;
 
          min-height: 700px;
+         position: relative;
     }  
     
 
@@ -22,7 +24,7 @@ $style:"about-us";
     &__title {
         @include text(90px, 700, $white);
         font-style: normal;
-        line-height: 0.3;
+        
         letter-spacing: normal;
         text-align: left;
         margin-bottom: 34px;

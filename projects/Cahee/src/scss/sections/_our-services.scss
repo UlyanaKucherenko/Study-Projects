@@ -5,6 +5,8 @@ $style:"our-services";
     height: 100vh;
 
     background-color: #70bfff;
+    position: relative;
+    z-index: 0;
 
     &__container {
         background: url("../img/services-bg.png") no-repeat center right /462px ;
@@ -14,8 +16,9 @@ $style:"our-services";
          align-items: flex-end;
          justify-content: center;
 
-         min-height: 700px;
+         min-height: 790px;
          //height: 100vh;
+         position: relative;
     }  
     
 
@@ -23,23 +26,10 @@ $style:"our-services";
     &__title {
         @include text(90px, 700, $white);
         font-style: normal;
-        line-height: 0.3;
+        
         letter-spacing: normal;
         text-align: left;
         margin-bottom: 34px;
     }
 
-    &__text {
-        @include text(17px, 300, $white);
-        font-style: normal;
-        line-height: 1.59;
-        letter-spacing: normal;
-        text-align: left;
-        margin-bottom: 10px;
-        max-width: 499px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
 }

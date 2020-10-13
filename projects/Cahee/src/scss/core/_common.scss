@@ -16,7 +16,7 @@ body {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1170px;
     margin: 0 auto;
         
 }
@@ -27,13 +27,14 @@ ul {
 
 a {
     text-decoration: none
+    
 }
 
 .button {
+    
     text-align: center;
     text-transform: uppercase;
     font-style: normal;
-    line-height: 1.35;
     letter-spacing: normal;
     
     @include text(20px, 300, $white);
