@@ -26,10 +26,10 @@
 						<a class="header__menu-link" href="#gallery">GALLERY</a>
 					</li>
 					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">BLOG</a>
+						<a class="header__menu-link" href="#blog">BLOG</a>
 					</li>
 					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">CONTACT</a>
+						<a class="header__menu-link" href="#contact">CONTACT</a>
 					</li>
 				</ul>
 			</div>
@@ -141,6 +141,119 @@
 				<input class="subscribe__input" type="text" placeholder="Your email address...">
 				<button class=" button subscribe__button">SUBSCRIBE</button>
 			</form>
+		</div>
+	</section>
+
+	<section class="blog" id="blog">
+		<div class="container blog__container">
+			<h2 class="blog__title">Blog</h2>
+			<p class="blog__text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+			<div class="blog__wrapper-articls">
+				<ul class="blog__list">
+					<li class="blog__list-item">
+						<div class="blog__wrapper-image">
+							<img src="./img/blog_img_1.png" alt="" >
+							<a class="blog__wrapper-content-article">
+								<div class="blog__data-article">
+									<span class="blog__day-article">20</span>
+									<span class="blog__mounth-article">NOV</span>
+								</div>
+								<div class="blog__text-article">
+									<p class="blog__name-article">
+										Green Smoothies: Too Much of a Good Thing?
+									</p>
+									<p class="blog__created-article">By Auskteez - 2 hours ago</p>
+								</div>
+							</a>
+						</div>
+					</li>
+
+					<li class="blog__list-item">
+						<div class="blog__wrapper-image blog__wrapper-image--second">
+							<img src="./img/blog_img_2.png" alt="" >
+							<a class="blog__wrapper-content-article">
+								<div class="blog__data-article">
+									<span class="blog__day-article">14</span>
+									<span class="blog__mounth-article">NOV</span>
+								</div>
+								<div class="blog__text-article">
+									<p class="blog__name-article">
+										Growing Food and a “Thirst” for Innovation
+									</p>
+									<p class="blog__created-article">
+										By Auskteez - 3 hours ago
+									</p>
+								</div>
+							</a>
+						</div>
+					</li>
+
+					<li class="blog__list-item">
+						<div class="blog__wrapper-image">
+							<img src="./img/blog_img_3.png" alt="" >
+							<a class="blog__wrapper-content-article">
+								<div class="blog__data-article">
+									<span class="blog__day-article">10</span>
+									<span class="blog__mounth-article">NOV</span>
+								</div>
+								<div class="blog__text-article">
+									<p class="blog__name-article">
+										Pesticides & Food: What You Need to Know
+									</p>
+									<p class="blog__created-article">By Auskteez - 6 hours ago</p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<a  class=" button blog__button" href="#">VIEW MORE</a>
+		</div>
+	</section>
+
+	<section class="contact" id="contact">
+		<div class="container contact__container">
+			<h2 class="contact__title">Contact</h2>
+			<p class="contact__text">
+				For new projects, ideas, business or anything
+				you'd like to discuss, contact with me!
+			</p>
+
+			<div class="contact__cols">
+				<div  class="contact__col contact__col--left">
+					<form class="contact__form" action="">
+						<label for="name"></label>
+						<input class="contact__input contact__input--name" id="name" type="text" placeholder="Your name...">
+						<label for="email"></label>
+						<input class="contact__input contact__input--email" id="email" type="email" placeholder="Your email...">
+						<label for="phone"></label>
+						<input class="contact__input contact__input--phone" id="phone" type="phone" placeholder="Your phone number...">
+						<label for="textarea"></label>
+						<textarea placeholder="Remember, be nice!" class="contact__textarea" name="textarea" id="textarea" cols="10" rows="10" >
+							
+						</textarea>
+					</form>
+				</div>
+				<div  class="contact__col contact__col--right">
+					<div class="contact__contacts">
+						<ul class="contact__list-contacts">
+							<li class="contact__list-item">
+								<strong >ADDRESS</strong>
+								<p>123 City name, Street, City, Country</p>
+							</li>
+							<li class="contact__list-item">
+								<strong>EMAIL</strong> 
+								<a class="contact__link" href="mailto:cahee@domain.com" target="_blank">cahee@domain.com</a>
+							</li>
+							<li class="contact__list-item">
+								<strong>PHONE</strong>
+								<a  class="contact__link" href="tel:0123456789" target="_blank">+012 345 6789</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 

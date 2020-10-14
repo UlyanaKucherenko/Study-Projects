@@ -1,0 +1,145 @@
+$style: "contact";
+
+.#{$style} {
+
+    background-color: $white;
+    min-height: 866px;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: url("../img/contact-bg.png") no-repeat center;
+        background-size: cover;
+        z-index: 0;
+      }
+
+      &__container {
+        @include flex(center,center,column);
+        text-align: center;
+        min-height: 866px;
+    }
+
+    &__title {
+        @include text(90px,700,#262626);
+        
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        margin-bottom: 48px;
+        
+    }
+
+    &__text {
+        @include text(17px,300,#262626);
+        max-width: 346px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        margin-bottom: 46px;
+
+    }
+
+    &__cols{
+        display: flex;
+        width: 100%;
+    }
+
+    &__col {
+        width: 50%;
+
+        &--right {
+            padding-left: 100px;
+        }
+
+        &--left {
+
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        //background-color: red;
+    }
+
+    &__input {
+        min-height: 50px;
+        width: 500px;
+        //width: 100%;
+        background-color:rgba(#00c4c4,0.5);
+        margin-bottom: 15px;
+        padding-left: 20px;
+
+
+        @include text(15px,700, $white);
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+        position: relative;
+
+        border-left: 5px solid rgba( #00c4c4, 0); 
+
+
+        &:hover {
+            border-left: 5px solid rgba( #355b82, 1); 
+            @include transition();
+        }
+        
+    }
+
+    &__input::-webkit-input-placeholder { /* WebKit browsers */
+        @include text(15px,300, $white);
+    }
+
+    &__textarea {
+        width: 500px;
+        background-color:rgba(#00c4c4,0.5);
+        min-width: 250px;
+        padding-left: 20px;
+        text-align: left;
+
+        &::-webkit-textarea-placeholder { /* WebKit browsers */
+            @include text(15px,300, $white);
+        }
+    }
+
+    &__contacts {
+       // background-color: green;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    &__list-contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__list-item {
+        margin-bottom: 10px;
+        @include text(15px,400, #262626);
+        .strong {
+            @include text(17px,700, #262626);
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        @include text(15px,400, #262626);
+    }
+}

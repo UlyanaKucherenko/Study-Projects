@@ -54,3 +54,19 @@ a {
         transition: all .1s ease-in;
     }
 }
+
+input, textarea, select {
+    -webkit-appearance: none;
+    border:none
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+    outline:none;
+}
+
+input:focus::-webkit-input-placeholder {
+     color:transparent; 
+    }

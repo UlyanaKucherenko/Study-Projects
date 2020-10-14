@@ -45,6 +45,13 @@
     left: $left;
   }
 
+  @mixin transition($types...) {
+    transition-property: $types;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    @content;
+  }
+
   /* Screens */
   $screen-iphone-5: 320px;
   $screen-iphone-6: 375px;
