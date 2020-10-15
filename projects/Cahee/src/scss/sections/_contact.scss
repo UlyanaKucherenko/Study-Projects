@@ -37,7 +37,7 @@ $style: "contact";
     }
 
     &__text {
-        @include text(17px,300,#262626);
+        @include text(17px,400,#262626);
         max-width: 346px;
         font-stretch: normal;
         font-style: normal;
@@ -76,7 +76,7 @@ $style: "contact";
         //width: 100%;
         background-color:rgba(#00c4c4,0.5);
         margin-bottom: 15px;
-        padding-left: 20px;
+        padding-left: 15px;
 
 
         @include text(15px,700, $white);
@@ -85,31 +85,67 @@ $style: "contact";
         letter-spacing: normal;
         text-align: left;
         position: relative;
-
+        font-family: $main-font;
         border-left: 5px solid rgba( #00c4c4, 0); 
 
 
         &:hover {
             border-left: 5px solid rgba( #355b82, 1); 
             @include transition();
+            background-color:rgba(#00c4c4,1);
+
+        }
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
+            @include text(15px,300, $white);
         }
         
     }
 
-    &__input::-webkit-input-placeholder { /* WebKit browsers */
-        @include text(15px,300, $white);
-    }
+    
 
     &__textarea {
         width: 500px;
+        height: 250px;
         background-color:rgba(#00c4c4,0.5);
-        min-width: 250px;
-        padding-left: 20px;
-        text-align: left;
+        @include text(15px,700, $white);
+        padding-left: 15px;
+        padding-top: 20px;
+        font-family: $main-font;
+        border-left: 5px solid rgba( #00c4c4, 0); 
+        resize: none;
+        margin-bottom: 10px;
 
-        &::-webkit-textarea-placeholder { /* WebKit browsers */
+        &:hover {
+            border-left: 5px solid rgba( #355b82, 1); 
+            @include transition();
+            background-color:rgba(#00c4c4,1);
+        }
+
+        &::-webkit-input-placeholder { /* WebKit browsers */
             @include text(15px,300, $white);
         }
+    }
+
+    &__button{
+        width: 500px;
+        cursor: pointer;
+        box-shadow: none;
+        border:none;
+        background-color:rgba(#00c4c4,0.5);
+
+        &:focus {
+            outline:none;
+        }
+    &:hover {
+        background-color: rgba(#00c4c4,1);
+        transition: all .3s ease-in;
+    }
+
+    &:active {
+        background-color: rgba(#ffbe33,1);
+        transition: all .1s ease-in;
+    }
     }
 
     &__contacts {
@@ -128,8 +164,8 @@ $style: "contact";
     }
 
     &__list-item {
-        margin-bottom: 10px;
-        @include text(15px,400, #262626);
+        margin-bottom: 20px;
+        @include text(15px,500, #262626);
         .strong {
             @include text(17px,700, #262626);
         }

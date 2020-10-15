@@ -70,7 +70,8 @@ $style: "blog";
         &:hover {
 
             .#{$style}__text-article {
-                @include transition();
+               // @include transition();
+                transition: all 0.5s ease-out;
                 background: linear-gradient(0deg, rgba(#000000,0.8),rgba(#ffffff,0.3));
             }
         }

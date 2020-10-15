@@ -222,24 +222,23 @@
 
 			<div class="contact__cols">
 				<div  class="contact__col contact__col--left">
-					<form class="contact__form" action="">
+					<form class="contact__form" action="#">
 						<label for="name"></label>
-						<input class="contact__input contact__input--name" id="name" type="text" placeholder="Your name...">
+						<input class="contact__input contact__input--name" id="name" type="text" required placeholder="Your name...">
 						<label for="email"></label>
-						<input class="contact__input contact__input--email" id="email" type="email" placeholder="Your email...">
+						<input class="contact__input contact__input--email" id="email" type="email" required placeholder="Your email...">
 						<label for="phone"></label>
-						<input class="contact__input contact__input--phone" id="phone" type="phone" placeholder="Your phone number...">
+						<input class="contact__input contact__input--phone" id="phone" type="tel" required placeholder="Your phone number...">
 						<label for="textarea"></label>
-						<textarea placeholder="Remember, be nice!" class="contact__textarea" name="textarea" id="textarea" cols="10" rows="10" >
-							
-						</textarea>
-					</form>
+						<textarea class="contact__textarea" name="textarea" id="textarea" cols="5" rows="5" wrap="physical" required placeholder="Your messge..."></textarea >
+						<button class=" button contact__button" type="submit">Submit</button>
+						</form>
 				</div>
 				<div  class="contact__col contact__col--right">
 					<div class="contact__contacts">
 						<ul class="contact__list-contacts">
 							<li class="contact__list-item">
-								<strong >ADDRESS</strong>
+								<strong>ADDRESS</strong>
 								<p>123 City name, Street, City, Country</p>
 							</li>
 							<li class="contact__list-item">
@@ -256,6 +255,15 @@
 			</div>
 		</div>
 	</section>
+
+	<footer class="footer">
+		<div class="container footer__container">
+			<p class="footer__copyright" >© 2015 Company. All right reserved.</p>
+			<a class="footer__logo" href="./">Cahee</a>
+			<p class="footer__made-by">Made with <span>love</span> by Auskteez</p>
+		</div>
+
+	</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<script src="js/bundle.js"></script>

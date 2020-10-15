@@ -1,0 +1,51 @@
+$style:"footer";
+
+.#{$style} {
+    min-height: 90px;
+    background-color: #262626;
+    &__container {
+        min-height: 90px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__copyright{
+        @include text(16px,300,#b9b9b9);
+       
+        font-stretch: normal;
+        font-style: normal;
+        
+        letter-spacing: normal;
+        text-align: left;
+  
+    }
+
+    &__logo {
+        display: inline-block;
+
+        @include text(25px,400,#b9b9b9);
+
+        font-family: $logo-font;
+        
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        
+    }
+
+    &__made-by {
+
+        @include text(15px,300,#b9b9b9);
+
+        font-stretch: normal;
+        font-style: normal;
+        
+        letter-spacing: normal;
+  
+        span {
+            @include text(15px,700,#ff2b58);
+        }
+    }
+}

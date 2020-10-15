@@ -52,6 +52,7 @@ a {
     &:active {
         background-color: rgba(#ffbe33,1);
         transition: all .1s ease-in;
+        outline:none;
     }
 }
 
@@ -67,6 +68,7 @@ textarea:hover {
     outline:none;
 }
 
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
      color:transparent; 
     }

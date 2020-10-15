@@ -90,6 +90,10 @@ $style:"subscribe";
         width: 170px;
         cursor: pointer;
 
+        &:focus {
+            outline:none;
+        }
+
         &:hover {
             background-color: rgba(#96b92c,0.8);
             transition: all .3s ease-in;
