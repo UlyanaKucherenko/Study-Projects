@@ -14,7 +14,7 @@
 				<a href="./" class="header__logo">Cahee</a>
 				<ul class="header__menu">
 					<li class="header__menu-item">
-						<a class="header__menu-link" href="#home">HOME</a>
+						<a class="header__menu-link" href="./">HOME</a>
 					</li>
 					<li class="header__menu-item">
 						<a class="header__menu-link" href="#about-us">ABOUT</a>
@@ -72,7 +72,54 @@
 	<section class="our-services" id="services">
 		<div class="container our-services__container">
 			<div class="our-services__cols">
-				<div class="our-services__col">
+				<div class="our-services__col our-services__col--left">
+					<ul  class="our-services__list">
+						<li  class="our-services__list-item">
+							<a class="our-services__link" href="#">
+								<span class="our-services__text">Online Shopping</span>
+								<span class="our-services__icone">
+									<svg class="icone">
+										<use xlink:href="./img/sprite.svg#shop"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+
+						<li class="our-services__list-item">
+							<a class="our-services__link" href="#">
+								<span class="our-services__text">Quality Product</span>
+								<span class="our-services__icone">
+									<svg class="icone">
+										<use xlink:href="./img/sprite.svg#product"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+
+						<li class="our-services__list-item">
+							<a class="our-services__link" href="#">
+								<span class="our-services__text">Domestic & International Delivery</span>
+								<span class="our-services__icone">
+									<svg class="icone">
+										<use xlink:href="./img/sprite.svg#domestic"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+
+						<li class="our-services__list-item">
+							<a class="our-services__link" href="#">
+								<span class="our-services__text">Well Organized</span>
+								<span class="our-services__icone">
+									<svg class="icone">
+										<use xlink:href="./img/sprite.svg#organized"></use>
+									</svg>
+								</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="our-services__col our-services__col--right">
 					<h2 class="our-services__title">Our Services</h2>
 				</div>
 			</div>
@@ -230,7 +277,7 @@
 						<label for="phone"></label>
 						<input class="contact__input contact__input--phone" id="phone" type="tel" required placeholder="Your phone number...">
 						<label for="textarea"></label>
-						<textarea class="contact__textarea" name="textarea" id="textarea" cols="5" rows="5" wrap="physical" required placeholder="Your messge..."></textarea >
+						<textarea class="contact__textarea" name="textarea" id="textarea" cols="5" rows="5" required placeholder="Your messge..."></textarea>
 						<button class=" button contact__button" type="submit">Submit</button>
 						</form>
 				</div>

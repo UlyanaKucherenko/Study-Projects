@@ -2,14 +2,14 @@ $style:"our-services";
 
 .#{$style} {
    
-    height: 100vh;
+    min-height: 790px;
 
     background-color: #70bfff;
     position: relative;
     z-index: 0;
 
     &__container {
-        background: url("../img/services-bg.png") no-repeat center right /462px ;
+        background: url("../img/services-bg.png") no-repeat top 90px right  ; 
         padding: 70px 0;
         display: flex;
          flex-direction: column;
@@ -21,15 +21,90 @@ $style:"our-services";
          position: relative;
     }  
     
+    &__cols {
+        display: flex;
+        //align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__col {
+
+        width: 50%;
+
+        &--left {
+            padding-left: 80px;
+        }
+        &--right {
+            padding-top: 120px;
+            
+        }
+    }
+
+    &__list {
+        //display: flex;
+        max-width: 400px;
+        @include flex(strech, strech,column);
+    }
+
+    &__list-item {
+        //display: flex;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+
+        @include text(20px,700, #262626);
+        
+        font-stretch: normal;
+        font-style: normal;
+        
+        letter-spacing: normal;
+        text-align: right;
+
+       
+    }
+
+    &__link {
+        @include flex();
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        @include transition(background-color);
+        &:hover {
+            box-shadow:none;
+            background-color: darken(#ffffff, 10%);
+            .icone {
+                fill: darken(orange, 5%);
+            }
+        }
+    }
+
+    &__text {
+        @include text(20px,700, #262626);
+        @include flex(center, center);
+        flex:1;
+        text-align: center;
+        padding: 0 10px;
+    }
+    &__icone {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border-left: 1px solid #9d9d9d;
+        @include flex(center, center);
+
+        .icone {
+            fill:#262626;
+            width: 55px;
+            height: 55px;
+            @include transition();
+        }
+    }
 
 
     &__title {
         @include text(90px, 700, $white);
-        font-style: normal;
-        
+        font-style: normal; 
         letter-spacing: normal;
-        text-align: left;
-        margin-bottom: 34px;
+        text-align: right;
     }
+
 
 }
