@@ -4,11 +4,14 @@ $style: "blog";
 
     background-color: #b07cf7;
     min-height: 864px;
+    z-index: 0;
 
     &__container {
         @include flex(center,center,column);
         text-align: center;
         min-height: 864px;
+        position: relative;
+        z-index: 1;
     }
 
     &__title {

@@ -21,11 +21,19 @@ $style:"header";
 
       &__navigation {
         display: flex;
-        position: absolute;
+        position: fixed;
         top: 0;
         min-height: 120px;
         width: 100%;
         z-index: 10;
+
+        background-color: rgba(red, 0.90);
+
+        @include transition();
+        &--shadow {
+          background-color: rgba(red, 0.90);
+          padding: 14px 0;
+        }
       }
 
       &__nav-container {
@@ -112,7 +120,7 @@ $style:"header";
       }
 
       &__content {
-        position: relative;
+       position: relative;
        
       }  
 
