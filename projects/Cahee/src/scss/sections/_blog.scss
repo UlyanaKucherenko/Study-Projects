@@ -12,6 +12,13 @@ $style: "blog";
         min-height: 864px;
         position: relative;
         z-index: 1;
+
+        @include media(1170px){ 
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
     }
 
     &__title {
@@ -21,6 +28,23 @@ $style: "blog";
         font-style: normal;
         letter-spacing: normal;
         margin-bottom: 30px;
+
+        @include media(1120px){
+            @include text(80px, 700, $white);
+        }
+
+        @include media($screen-desktop){ //1024
+            @include text(70px, 700, $white);
+        }
+
+        @include media(960px){ 
+            text-align: center;
+        }
+        
+        @include media(820px){ 
+            @include text(50px, 700, $white);
+          
+        }
     }
 
     &__text {
@@ -32,12 +56,21 @@ $style: "blog";
         letter-spacing: normal;
         text-align: center;
         margin-bottom: 47px;
+
+        @include media(820px){ 
+            @include text(15px, 300, $white);
+        }
     }
 
     &__wrapper-articls {
        width: 100%;
 
        margin-bottom: 50px;
+
+       
+       @include media(1170px){ 
+        width: 80%;
+    }
     }
     &__list {
        display: flex;
@@ -46,16 +79,67 @@ $style: "blog";
        align-items:center;
        flex-wrap: wrap;
 
+       @include media(1170px){ 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        flex-wrap: wrap;
+    }
+
+   @include media(980px){ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        flex-wrap: nowrap;
+    }
+
     }
 
     &__list-item {
         position: relative;
+        @include media(1170px){ 
+            &:nth-child(1) {
+                margin-right: 20px;
+                
+            }
+            &:nth-child(3) {
+                margin-top: 20px;
+                
+            }
+            
+        }
+
+        @include media(980px){ 
+
+            margin-bottom: 20px;
+            &:nth-child(1) {
+                margin-right: 0px;
+                
+            }
+            &:nth-child(3) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+             }
+        }
      }
 
     &__wrapper-image {
+        
         width: 370px;
         @include padding-hack(87%, cover);
         position: relative;
+
+        @include media(390px){ 
+            width: 330px;
+            @include padding-hack(87%, cover);
+        }
+
+        @include media(355px){ 
+            width: 300px;
+            @include padding-hack(87%, cover);
+       }
     }
 
     &__wrapper-content-article{
@@ -127,6 +211,17 @@ $style: "blog";
     &__name-article {
         @include text(20px,700,$white);
         margin-bottom: 20px;
+
+        @include media(390px){ 
+             @include text(17px,700,$white);
+             margin-bottom: 15px;
+        }
+
+        @include media(355px){ 
+            @include text(15px,700,$white);
+            margin-bottom: 10px;
+       }
+
     }
     &__created-article {
         

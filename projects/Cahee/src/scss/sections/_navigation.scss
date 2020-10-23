@@ -42,10 +42,28 @@ $style:"navigation";
         
       }
 
+      &__burger {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        display: none;
+
+        @include media($screen-tablet-large){ //860
+          display: block;
+        }
+      }
+
       &__menu {
         display: flex;
         justify-content: space-between;
         position: relative;
+
+        @include media($screen-tablet-large){ //860
+          display: none;
+        }
       }
 
       &__menu-item {

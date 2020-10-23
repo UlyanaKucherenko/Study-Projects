@@ -17,98 +17,15 @@ $style:"header";
         background: url("../img/header-bg.png") no-repeat center;
         background-size: cover;
         z-index: 0;
-      }
 
-      &__navigation {
-        display: flex;
-        position: fixed;
-        top: 0;
-        min-height: 120px;
-        width: 100%;
-        z-index: 10;
-
-        background-color: rgba(red, 0.90);
-
-        @include transition();
-        &--shadow {
-          background-color: rgba(red, 0.90);
-          padding: 14px 0;
+        @include media($screen-tablet){ //768
+          background: url("../img/header-bg.png") no-repeat center;
+        }
+        @include media(596px){ //596
+          background: url("../img/header-bg.png") no-repeat;
         }
       }
 
-      &__nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items:center;
-        
-      }
-
-      &__logo {
-        display: inline-block;
-
-        @include text(50px,400,#262626);
-
-        font-family: $logo-font;
-        
-        font-stretch: normal;
-        font-style: normal;
-        letter-spacing: normal;
-        text-align: right;
-        
-      }
-
-      &__menu {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-      }
-
-      &__menu-item {
-        margin-right: 40px;
-        padding-top: 10px;
-        position: relative;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &::before {
-
-          position: absolute;
-          content:" ";
-          display: inline-block;
-          width: 50px;
-          height: 3px;
-          background-color: rgba(red,0);
-          top: 0 ;
-          left: 50%;
-          transform: translateX(-50%);
-         // transition: all 0.5s ease-out;
-        }
-
-        &:hover{
-          
-           &::before {
-          background-color: rgba(red,1);
-          transition: all 0.5s ease-out;
-           }
-        }
-      }
-
-      &__menu-link {
-        font-family: Raleway;
-
-        @include text(16px,700,#262626);
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.56;
-        letter-spacing: normal;
-        text-align: right;
-
-        position: relative;
-
-       
-      }
 
       &__container {
          display: flex;
@@ -117,12 +34,15 @@ $style:"header";
          justify-content: center;
   
          min-height: 100vh;
-      }
 
-      &__content {
-       position: relative;
-       
-      }  
+         @include media(596px){ //596
+
+          display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         }
+      }
 
       &__title {
         @include text(60px,900,#262626);
@@ -131,7 +51,11 @@ $style:"header";
         
         letter-spacing: normal;
         margin-bottom: 34px;
-        text-align: left;
+        //text-align: left;
+
+        @include media($screen-tablet-large){ //860
+          @include text(50px,900,#262626);
+        }
       }
 
       &__text {
@@ -141,6 +65,14 @@ $style:"header";
         letter-spacing: normal;
         max-width: 370px;
         margin-bottom: 31px;
+
+        @include media($screen-tablet-large){ //860
+          @include text(15px,300,#262626);
+        }
+      }
+
+      &__button {
+
       }
 
       &__scroll {

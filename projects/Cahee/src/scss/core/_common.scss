@@ -18,7 +18,7 @@ body {
     width: 100%;
     max-width: 1170px;
     margin: 0 auto;
-        
+
 }
 
 ul {
@@ -54,6 +54,12 @@ a {
         transition: all .1s ease-in;
         outline:none;
     }
+
+    @include media($screen-tablet-large){ //860
+        min-height: 42px;
+        @include text(15px, 300, $white);
+    }
+
 }
 
 input, textarea, select {

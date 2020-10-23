@@ -24,6 +24,8 @@ $style: "contact";
         @include flex(center,center,column);
         text-align: center;
         min-height: 866px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     &__title {
@@ -34,6 +36,22 @@ $style: "contact";
         letter-spacing: normal;
         margin-bottom: 48px;
         
+        @include media(1120px){
+            @include text(80px, 700, #262626);
+        }
+
+        @include media($screen-desktop){ //1024
+            @include text(70px, 700, #262626);
+        }
+
+        @include media(960px){ 
+            text-align: center;
+        }
+        
+        @include media(820px){ 
+            @include text(50px, 700, #262626);
+          
+        }
     }
 
     &__text {
@@ -49,11 +67,13 @@ $style: "contact";
 
     &__cols{
         display: flex;
+        justify-content: space-between;
         width: 100%;
+        flex-wrap: wrap;
     }
 
     &__col {
-        width: 50%;
+        width: 49%;
 
         &--right {
             padding-left: 100px;
@@ -62,6 +82,27 @@ $style: "contact";
         &--left {
 
         }
+
+        @include media(1035px){ 
+            &--right {
+                padding-left: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @include media(790px){ 
+            
+           width: 100%;
+           &--left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+    }
     }
     &__form {
         display: flex;
@@ -99,6 +140,12 @@ $style: "contact";
         &::-webkit-input-placeholder { /* WebKit browsers */
             @include text(15px,300, $white);
         }
+
+        @include media(530px){ 
+            
+            width: 300px;
+        
+        }
         
     }
 
@@ -125,6 +172,12 @@ $style: "contact";
         &::-webkit-input-placeholder { /* WebKit browsers */
             @include text(15px,300, $white);
         }
+
+        @include media(530px){ 
+            
+            width: 300px;
+        
+    }
     }
 
     &__button{
@@ -137,15 +190,22 @@ $style: "contact";
         &:focus {
             outline:none;
         }
-    &:hover {
-        background-color: rgba(#00c4c4,1);
-        transition: all .3s ease-in;
+        &:hover {
+            background-color: rgba(#00c4c4,1);
+            transition: all .3s ease-in;
+        }
+
+        &:active {
+            background-color: rgba(#ffbe33,1);
+            transition: all .1s ease-in;
+        }
+
+        @include media(530px){ 
+            
+            width: 300px;
+        
     }
 
-    &:active {
-        background-color: rgba(#ffbe33,1);
-        transition: all .1s ease-in;
-    }
     }
 
     &__contacts {
@@ -155,12 +215,53 @@ $style: "contact";
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
+
+        @include media(1035px){ 
+            
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            
+        }
+
+        @include media(860px){ 
+            
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        
+    }
+        @include media(790px){ 
+                
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+         }
     }
 
     &__list-contacts{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        @include media(790px){ 
+                
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        
+         }
+
+         @include media(600px){ 
+                
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+         }
     }
 
     &__list-item {
@@ -172,10 +273,41 @@ $style: "contact";
         &:last-child{
             margin-bottom: 0;
         }
+
+        @include media(790px){ 
+                
+            @include text(15px,500, $white);
+            .strong {
+                @include text(17px,700, $white);
+            }
+
+            margin-bottom: 0;
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0;
+            }
+
+        }
+
+        @include media(600px){ 
+                
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-right: 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+         }
     }
 
     &__link {
         display: block;
         @include text(15px,400, #262626);
+        @include media(790px){ 
+            @include text(15px,400, $white);
+            
+        }
     }
 }
