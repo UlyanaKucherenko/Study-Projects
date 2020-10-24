@@ -2,7 +2,7 @@ $style:"footer";
 
 .#{$style} {
     min-height: 90px;
-    background-color: #262626;
+    background-color: $N120;
     &__container {
         min-height: 90px;
         display: flex;
@@ -21,7 +21,7 @@ $style:"footer";
     }
 
     &__copyright{
-        @include text(16px,300,#b9b9b9);
+        @include text(16px,300,$N10);
        
         font-stretch: normal;
         font-style: normal;
@@ -39,7 +39,7 @@ $style:"footer";
     &__logo {
         display: inline-block;
 
-        @include text(25px,400,#b9b9b9);
+        @include text(25px,400,$N10);
 
         font-family: $logo-font;
         
@@ -54,7 +54,7 @@ $style:"footer";
 
     &__made-by {
 
-        @include text(15px,300,#b9b9b9);
+        @include text(15px,300,$N10);
 
         font-stretch: normal;
         font-style: normal;
@@ -62,7 +62,7 @@ $style:"footer";
         letter-spacing: normal;
   
         span {
-            @include text(15px,700,#ff2b58);
+            @include text(15px,700,$N40);
         }
 
         @include media(600px){ 

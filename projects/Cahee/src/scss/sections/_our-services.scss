@@ -4,7 +4,7 @@ $style:"our-services";
    
     min-height: 790px;
 
-    background-color: #70bfff;
+    background-color: $N170;
     position: relative;
     z-index: 0;
 
@@ -23,7 +23,7 @@ $style:"our-services";
             background: url("../img/services-bg.png") no-repeat top right /350px  ; 
          }
          @include media(596px){ //596
-            background: #70bfff;
+            background: $N170;
           }
         
     }  
@@ -37,11 +37,11 @@ $style:"our-services";
 
         @include media($screen-netbook){ //960
             display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        }
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            }
     }
 
     &__col {
@@ -86,17 +86,13 @@ $style:"our-services";
     &__list-item {
         //display: flex;
         margin-bottom: 20px;
-        background-color: #ffffff;
+        background-color: $white;
 
-        @include text(20px,700, #262626);
-        
+        @include text(20px,700, $N120);
         font-stretch: normal;
         font-style: normal;
-        
         letter-spacing: normal;
         text-align: right;
-
-       
     }
 
     &__link {
@@ -105,7 +101,7 @@ $style:"our-services";
         @include transition(background-color);
         &:hover {
             box-shadow:none;
-            background-color: darken(#ffffff, 10%);
+            background-color: darken($white, 10%);
             .icone {
                 fill: darken(orange, 5%);
             }
@@ -113,7 +109,7 @@ $style:"our-services";
     }
 
     &__text {
-        @include text(20px,700, #262626);
+        @include text(20px,700, $N120);
         @include flex(center, center);
         flex:1;
         text-align: center;
@@ -123,11 +119,11 @@ $style:"our-services";
         width: 100px;
         height: 100px;
         display: inline-block;
-        border-left: 1px solid #9d9d9d;
+        border-left: 1px solid $N10;
         @include flex(center, center);
 
         .icone {
-            fill:#262626;
+            fill:$N120;
             width: 55px;
             height: 55px;
             @include transition();

@@ -47,7 +47,7 @@ $style:"subscribe";
 
 
     &__title {
-        @include text(40px, 700,  #262626);
+        @include text(40px, 700, $N120);
         font-stretch: normal;
         font-style: normal;
         
@@ -60,7 +60,7 @@ $style:"subscribe";
     }
 
     &__text {
-        @include text(17px, 300, #262626);
+        @include text(17px, 300, $N120);
         font-stretch: normal;
         font-style: normal;
         line-height: 1.59;
@@ -71,7 +71,7 @@ $style:"subscribe";
         max-width: 542px;
 
         @include media(820px){ 
-            @include text(15px, 300, #262626);
+            @include text(15px, 300, $N120);
         }
         @include media(596px){ //596
             align-items: center;
@@ -92,7 +92,7 @@ $style:"subscribe";
 
     &__input {
         padding: 0 15px;
-        @include text(15px, 300,rgba(#262626,0.5));
+        @include text(15px, 300,rgba($N120,0.5));
 
         min-height: 42px;
         font-stretch: normal;
@@ -104,7 +104,7 @@ $style:"subscribe";
 
         margin-right: 30px;
         outline: none;
-        border: 1px solid #262626;
+        border: 1px solid $N120;
 
         @include media(860px) {//860
             width: 400px;
@@ -136,8 +136,8 @@ $style:"subscribe";
         line-height: 1.35;
         letter-spacing: normal;
         @include text(20px, 300, $white);
-        background-color: #96b92c;
-        border: 1px solid #96b92c;
+        background-color:$N60;
+        border: 1px solid $N60;
         width: 170px;
         cursor: pointer;
 
@@ -146,12 +146,12 @@ $style:"subscribe";
         }
 
         &:hover {
-            background-color: rgba(#96b92c,0.9);
+            background-color: rgba($N60,0.9);
             transition: all .3s ease-in;
         }
     
         &:active {
-            background-color: rgba(#ffbe33,1);
+            background-color: rgba($N90,1);
             transition: all .1s ease-in;
         }
 

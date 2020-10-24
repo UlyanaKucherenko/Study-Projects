@@ -5,36 +5,66 @@
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>Cahee</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/fav/cahee.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<!--navigation-->
 	<nav class="navigation" id="nav">
-		<div class="container navigation__container ">
+		<div class="container navigation__container " id="nav-container">
 			<a href="./" class="navigation__logo">Cahee</a>
-			<a href="#" id="burger" class="navigation__burger">
+			<span id="burger" class="navigation__burger">
 				<img src="./img/burger.svg" alt="burger">
-			</a>
-			<ul class="navigation__menu">
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#home">HOME</a>
-				</li>
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#about-us">ABOUT</a>
-				</li>
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#services">SERVICES</a>
-				</li>
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#gallery">GALLERY</a>
-				</li>
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#blog">BLOG</a>
-				</li>
-				<li class="navigation__menu-item">
-					<a class="navigation__menu-link" href="#contact">CONTACT</a>
-				</li>
-			</ul>
+			</span>
+			<!--menu-mobile-->
+			<div class="navigation__wrapper-menu-mobile" id="menu-mobile">
+				<ul class="navigation__menu-mobile">
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#home">HOME</a>
+					</li>
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#about-us">ABOUT</a>
+					</li>
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#services">SERVICES</a>
+					</li>
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#gallery">GALLERY</a>
+					</li>
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#blog">BLOG</a>
+					</li>
+					<li class="navigation__menu-item navigation__menu-item--mobile">
+						<a class="navigation__menu-link" href="#contact">CONTACT</a>
+					</li>
+				</ul>
+
+				<span id="cross" class="navigation__cross">
+					<img src="./img/cancel.svg" alt="burger">
+				</span>
+			</div>
+
+				<ul class="navigation__menu">
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#home">HOME</a>
+					</li>
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#about-us">ABOUT</a>
+					</li>
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#services">SERVICES</a>
+					</li>
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#gallery">GALLERY</a>
+					</li>
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#blog">BLOG</a>
+					</li>
+					<li class="navigation__menu-item">
+						<a class="navigation__menu-link" href="#contact">CONTACT</a>
+					</li>
+				</ul>
+			
 		</div>
 		
 	</nav>
@@ -47,16 +77,13 @@
 				<p class="header__text">
 					Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 				</p>
-				<a  class=" button header__button" href="#">GET FREE NOW</a>
+				<a  class=" button header__button" href="#" target="_blank">GET FREE NOW</a>
 
 				<a href="#about-us" class="header__scroll">
-					
-						<svg class="icone">
-							<use xlink:href="./img/sprite.svg#scroll"></use>
-						</svg>
-					
+					<svg class="scroll">
+						<path d="M11.497,37.001 C5.156,37.001 -0.001,31.837 -0.001,25.490 L-0.001,11.416 C-0.001,5.440 4.612,0.468 10.543,-0.007 L12.451,-0.007 C18.383,0.472 22.996,5.444 22.996,11.416 L22.996,25.490 C22.996,31.837 17.838,37.001 11.497,37.001 ZM21.088,11.416 C21.088,6.121 16.785,1.815 11.497,1.815 C6.208,1.815 1.906,6.121 1.906,11.416 L1.906,25.490 C1.906,30.785 6.209,35.091 11.497,35.091 C16.785,35.091 21.088,30.785 21.088,25.490 L21.088,11.416 ZM11.497,13.075 C10.583,13.075 9.840,12.331 9.840,11.416 C9.840,10.501 10.583,9.757 11.497,9.757 C12.410,9.757 13.154,10.501 13.154,11.416 C13.154,12.331 12.411,13.075 11.497,13.075 Z"/>
+					</svg>
 				</a>
-			
 		</div>
 	</header>
 	<!---->
@@ -85,7 +112,7 @@
 				<div class="our-services__col our-services__col--left">
 					<ul  class="our-services__list">
 						<li  class="our-services__list-item">
-							<a class="our-services__link" href="#">
+							<a class="our-services__link" href="#" target="_blank">
 								<span class="our-services__text">Online Shopping</span>
 								<span class="our-services__icone">
 									<svg class="icone">
@@ -96,7 +123,7 @@
 						</li>
 
 						<li class="our-services__list-item">
-							<a class="our-services__link" href="#">
+							<a class="our-services__link" href="#" target="_blank">
 								<span class="our-services__text">Quality Product</span>
 								<span class="our-services__icone">
 									<svg class="icone">
@@ -107,7 +134,7 @@
 						</li>
 
 						<li class="our-services__list-item">
-							<a class="our-services__link" href="#">
+							<a class="our-services__link" href="#" target="_blank">
 								<span class="our-services__text">Domestic & International Delivery</span>
 								<span class="our-services__icone">
 									<svg class="icone">
@@ -118,7 +145,7 @@
 						</li>
 
 						<li class="our-services__list-item">
-							<a class="our-services__link" href="#">
+							<a class="our-services__link" href="#" target="_blank">
 								<span class="our-services__text">Well Organized</span>
 								<span class="our-services__icone">
 									<svg class="icone">
@@ -133,9 +160,6 @@
 					<h2 class="our-services__title">Our Services</h2>
 				</div>
 			</div>
-				<div class="our-services__contant">
-						
-				</div>
 		</div>
 	</section>
 	
@@ -181,7 +205,7 @@
 
 			</ul>
 
-			<a  class=" button gallery__button" href="#">VIEW MORE</a>
+			<a  class=" button gallery__button" href="#" target="_blank">VIEW MORE</a>
 		</div>
 		
 	</section>
@@ -194,7 +218,7 @@
 				Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 			</p>
 			<form action="#" class="subscribe__form-search">
-				<input class="subscribe__input" type="text" placeholder="Your email address...">
+				<input class="subscribe__input" type="text" required placeholder="Your email address...">
 				<button class=" button subscribe__button">SUBSCRIBE</button>
 			</form>
 		</div>
@@ -210,7 +234,7 @@
 					<li class="blog__list-item">
 						<div class="blog__wrapper-image">
 							<img src="./img/blog_img_1.png" alt="" >
-							<a class="blog__wrapper-content-article"  href="#">
+							<a class="blog__wrapper-content-article"  href="#" target="_blank">
 								<div class="blog__data-article">
 									<span class="blog__day-article">20</span>
 									<span class="blog__mounth-article">NOV</span>
@@ -228,7 +252,7 @@
 					<li class="blog__list-item">
 						<div class="blog__wrapper-image blog__wrapper-image--second">
 							<img src="./img/blog_img_2.png" alt="" >
-							<a class="blog__wrapper-content-article" href="#">
+							<a class="blog__wrapper-content-article" href="#" target="_blank">
 								<div class="blog__data-article">
 									<span class="blog__day-article">14</span>
 									<span class="blog__mounth-article">NOV</span>
@@ -248,7 +272,7 @@
 					<li class="blog__list-item">
 						<div class="blog__wrapper-image">
 							<img src="./img/blog_img_3.png" alt="" >
-							<a class="blog__wrapper-content-article" href="#">
+							<a class="blog__wrapper-content-article" href="#" target="_blank">
 								<div class="blog__data-article">
 									<span class="blog__day-article">10</span>
 									<span class="blog__mounth-article">NOV</span>
@@ -265,7 +289,7 @@
 				</ul>
 			</div>
 
-			<a  class=" button blog__button" href="#">VIEW MORE</a>
+			<a  class=" button blog__button" href="#" target="_blank">VIEW MORE</a>
 		</div>
 	</section>
 	

@@ -29,7 +29,7 @@ $style: "contact";
     }
 
     &__title {
-        @include text(90px,700,#262626);
+        @include text(90px,700,$N120);
         
         font-stretch: normal;
         font-style: normal;
@@ -37,11 +37,11 @@ $style: "contact";
         margin-bottom: 48px;
         
         @include media(1120px){
-            @include text(80px, 700, #262626);
+            @include text(80px, 700, $N120);
         }
 
         @include media($screen-desktop){ //1024
-            @include text(70px, 700, #262626);
+            @include text(70px, 700, $N120);
         }
 
         @include media(960px){ 
@@ -49,13 +49,13 @@ $style: "contact";
         }
         
         @include media(820px){ 
-            @include text(50px, 700, #262626);
+            @include text(50px, 700, $N120);
           
         }
     }
 
     &__text {
-        @include text(17px,400,#262626);
+        @include text(17px,400,$N120);
         max-width: 346px;
         font-stretch: normal;
         font-style: normal;
@@ -108,14 +108,13 @@ $style: "contact";
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        //background-color: red;
     }
 
     &__input {
         min-height: 50px;
         width: 500px;
         //width: 100%;
-        background-color:rgba(#00c4c4,0.5);
+        background-color:rgba($N160,0.5);
         margin-bottom: 15px;
         padding-left: 15px;
 
@@ -127,13 +126,13 @@ $style: "contact";
         text-align: left;
         position: relative;
         font-family: $main-font;
-        border-left: 5px solid rgba( #00c4c4, 0); 
+        border-left: 5px solid rgba( $N160, 0); 
 
 
         &:hover {
-            border-left: 5px solid rgba( #355b82, 1); 
+            border-left: 5px solid rgba( $N20, 1); 
             @include transition();
-            background-color:rgba(#00c4c4,1);
+            background-color:rgba($N160,1);
 
         }
 
@@ -154,19 +153,19 @@ $style: "contact";
     &__textarea {
         width: 500px;
         height: 250px;
-        background-color:rgba(#00c4c4,0.5);
+        background-color:rgba($N160,0.5);
         @include text(15px,700, $white);
         padding-left: 15px;
         padding-top: 20px;
         font-family: $main-font;
-        border-left: 5px solid rgba( #00c4c4, 0); 
+        border-left: 5px solid rgba( $N160, 0); 
         resize: none;
         margin-bottom: 10px;
 
         &:hover {
-            border-left: 5px solid rgba( #355b82, 1); 
+            border-left: 5px solid rgba( $N20, 1); 
             @include transition();
-            background-color:rgba(#00c4c4,1);
+            background-color:rgba($N160,1);
         }
 
         &::-webkit-input-placeholder { /* WebKit browsers */
@@ -185,18 +184,18 @@ $style: "contact";
         cursor: pointer;
         box-shadow: none;
         border:none;
-        background-color:rgba(#00c4c4,0.5);
+        background-color:rgba($N160,0.5);
 
         &:focus {
             outline:none;
         }
         &:hover {
-            background-color: rgba(#00c4c4,1);
+            background-color: rgba($N160,1);
             transition: all .3s ease-in;
         }
 
         &:active {
-            background-color: rgba(#ffbe33,1);
+            background-color: rgba($N190,1);
             transition: all .1s ease-in;
         }
 
@@ -266,9 +265,9 @@ $style: "contact";
 
     &__list-item {
         margin-bottom: 20px;
-        @include text(15px,500, #262626);
+        @include text(15px,500, $N120);
         .strong {
-            @include text(17px,700, #262626);
+            @include text(17px,700, $N120);
         }
         &:last-child{
             margin-bottom: 0;
@@ -304,7 +303,7 @@ $style: "contact";
 
     &__link {
         display: block;
-        @include text(15px,400, #262626);
+        @include text(15px,400, $N120);
         @include media(790px){ 
             @include text(15px,400, $white);
             

@@ -25,13 +25,21 @@ $style:"navigation";
         display: flex;
         justify-content: space-between;
         align-items:center;
-        
+
+        &--mobile {
+
+          display: flex;
+          justify-content: space-between;
+          align-items:flex-start;
+          background-color: rgba(grey, .8);
+
+        }
       }
 
       &__logo {
         display: inline-block;
 
-        @include text(50px,400,#262626);
+        @include text(50px,400,$N120);
 
         font-family: $logo-font;
         
@@ -53,9 +61,45 @@ $style:"navigation";
 
         @include media($screen-tablet-large){ //860
           display: block;
+
+          &--hidden {
+            display: none;
+
+          }
         }
+
       }
 
+      &__cross {
+        border: block;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        width: 55px;
+        height: 55px;
+      }
+
+      &__wrapper-menu-mobile {
+       
+        //display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 0 10px 20px;
+
+        display: none;
+        &--show {
+          display: flex;
+        }
+
+      }
+      &__menu-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        width: 150px;
+      
+      }
+     
       &__menu {
         display: flex;
         justify-content: space-between;
@@ -64,8 +108,8 @@ $style:"navigation";
         @include media($screen-tablet-large){ //860
           display: none;
         }
-      }
 
+      }
       &__menu-item {
         margin-right: 40px;
         padding-top: 10px;
@@ -82,17 +126,38 @@ $style:"navigation";
           display: inline-block;
           width: 50px;
           height: 3px;
-          background-color: rgba(red,0);
+          background-color: rgba($N90,0);
           top: 0 ;
           left: 50%;
           transform: translateX(-50%);
          // transition: all 0.5s ease-out;
         }
 
+        &--mobile {
+          margin-right: 0px;
+          padding-top: 5px;
+          position: relative;
+
+          &::before {
+
+            position: absolute;
+            content:" ";
+            display: inline-block;
+            width: 50%;
+            height: 3px;
+            background-color: rgba($N90,0);
+            top: 0 ;
+            left:0;
+            transform: translateX(0%);
+           // transition: all 0.5s ease-out;
+          }
+  
+         }
+
         &:hover{
           
            &::before {
-          background-color: rgba(red,1);
+          background-color: rgba($N90,1);
           transition: all 0.5s ease-out;
            }
         }
@@ -101,7 +166,7 @@ $style:"navigation";
       &__menu-link {
         font-family: Raleway;
 
-        @include text(16px,700,#262626);
+        @include text(16px,700,$N120);
         font-stretch: normal;
         font-style: normal;
         line-height: 1.56;

@@ -45,7 +45,11 @@ $style:"header";
       }
 
       &__title {
-        @include text(60px,900,#262626);
+        animation: fadeInLeft; 
+        animation-duration: 1.5s;
+        
+
+        @include text(60px,900,$N120);
         font-stretch: normal;
         font-style: normal;
         
@@ -54,12 +58,15 @@ $style:"header";
         //text-align: left;
 
         @include media($screen-tablet-large){ //860
-          @include text(50px,900,#262626);
+          @include text(50px,900,$N120);
         }
       }
 
       &__text {
-        @include text(17px,300,#262626);
+        animation: fadeInLeft; 
+        animation-duration: 1.5s;
+
+        @include text(17px,300,$N120);
         font-style: normal;
         line-height: 1.59;
         letter-spacing: normal;
@@ -67,12 +74,13 @@ $style:"header";
         margin-bottom: 31px;
 
         @include media($screen-tablet-large){ //860
-          @include text(15px,300,#262626);
+          @include text(15px,300,$N120);
         }
       }
 
       &__button {
-
+        animation: fadeInLeft; 
+        animation-duration: 1.5s;
       }
 
       &__scroll {
@@ -83,32 +91,28 @@ $style:"header";
         display: block;
        
         cursor: pointer;
+      
+        background-color: transparent;
+        //outline: none;
+        cursor: pointer;
+        //background-color: red;
 
-        animation-name: scroll-down;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-iteration-count: 3;
-
-          .icone {
-            fill:#262626;
-            /*animation-name: scroll-down;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-iteration-count: 2;*/
-            width: 55px;
-            height: 55px;
-            @include transition();
-            
-            position: relative;
-            
-        }
-
-       &:hover {
-        .icone{
-            fill:#ee855f;
+        animation: heartBeat; 
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        .scroll{
+         width: 50px;
+         height: 50px;
+          
+            fill:$N120;
+          
+            &:hover {
+          
+              fill:$N80;
             
           }
         }
+      
       }
 
      
