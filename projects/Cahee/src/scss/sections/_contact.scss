@@ -118,7 +118,7 @@ $style: "contact";
         background-color:rgba($N160,0.5);
         margin-bottom: 15px;
         padding-left: 15px;
-
+        font-family: $main-font;
 
         @include text(15px,700, $white);
         font-stretch: normal;
@@ -144,6 +144,12 @@ $style: "contact";
         @include media(530px){ 
             
             width: 300px;
+        
+        }
+
+        @include media(330px){ 
+            
+            width: 270px;
         
         }
         
@@ -178,7 +184,13 @@ $style: "contact";
             
             width: 300px;
         
-    }
+        }
+
+        @include media(330px){ 
+            
+            width: 270px;
+        
+        }
     }
 
     &__button{
@@ -205,7 +217,14 @@ $style: "contact";
             
             width: 300px;
         
-    }
+        }
+
+        @include media(330px){ 
+            
+            width: 270px;
+        
+        }
+
 
     }
 
