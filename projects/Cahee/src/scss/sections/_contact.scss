@@ -112,6 +112,7 @@ $style: "contact";
 
     &__input {
         min-height: 50px;
+        padding: 0 15px;
         width: 500px;
         //width: 100%;
         background-color:rgba($N160,0.5);
@@ -156,6 +157,7 @@ $style: "contact";
         background-color:rgba($N160,0.5);
         @include text(15px,700, $white);
         padding-left: 15px;
+        padding-right: 15px;
         padding-top: 20px;
         font-family: $main-font;
         border-left: 5px solid rgba( $N160, 0); 
