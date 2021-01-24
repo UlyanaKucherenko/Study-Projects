@@ -27,7 +27,6 @@ $style:"header";
     }
    
     &__container {
-      //min-height: 100vh;
       @include flex( center,center, column);
 
     }
@@ -82,10 +81,10 @@ $style:"header";
       font-family: $josefin;
       letter-spacing: 2.8px;
       text-align: center;
-      border-radius: 0px; 
-      -webkit-border-radius: 0px; 
-      -moz-border-radius: 0px; 
-      -khtml-border-radius: 0px; 
+      border-radius: none; 
+      -webkit-border-radius: none; 
+      -moz-border-radius: none; 
+      -khtml-border-radius: none; 
     }
 
     &__btn {
