@@ -20,6 +20,11 @@ $style:"header";
       background-size: cover;
       z-index: 0;
     }
+
+    @include media(414px){
+      @include text(14px,700,#ffffff);
+      min-height: 500px;
+    }
    
     &__container {
       //min-height: 100vh;
@@ -77,6 +82,7 @@ $style:"header";
       font-family: $josefin;
       letter-spacing: 2.8px;
       text-align: center;
+      border-radius: none;
     }
 
     &__btn {
@@ -217,4 +223,6 @@ $style:"header";
       }
 
     }
+
 }
+
