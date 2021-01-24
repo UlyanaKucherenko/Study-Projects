@@ -30,6 +30,7 @@ a {
 }
 
 .button {
+    @include flex(center,center);
     text-align: center;
     text-transform: uppercase;
     font-style: normal;
@@ -42,12 +43,19 @@ a {
     min-height: 60px;
     
     background-color: $main-color;
-
-    //background-image: radial-gradient(circle at -13.36% 79.54%, #66ffff 0, #6dddff 25%, #6cb4d8 50%, #648da6 75%, #586b79 100%);
-
     font-family: $aleo;
-    padding: 24px 0px 23px;
-    display: block;
+    padding: 0px 15px;
+
+    @include media(768px){
+        margin: 0 auto;
+    }
+
+    @include media(446px){
+        max-width: 115px;
+        width: 100%;
+      
+        @include text(12px, 400, $white);
+      }
  
 
     &:hover {
@@ -59,6 +67,8 @@ a {
         background-color: rgba(#ffbe33,1);
         transition: all .1s ease-in;
     }
+
+    
 }
 
 h6 {

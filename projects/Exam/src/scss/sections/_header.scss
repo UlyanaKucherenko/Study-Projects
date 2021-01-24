@@ -3,8 +3,8 @@ $style:"header";
 .#{$style} {
 
     background-color:$main-color;
-    height: 100vh;
-
+    min-height: 100vh;
+    @include flex(center,center,column);
     position: relative;
     z-index: 1;
     
@@ -21,197 +21,187 @@ $style:"header";
       z-index: 0;
     }
    
-      &__container {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-  
-         min-height: 100vh;
+    &__container {
+      //min-height: 100vh;
+      @include flex( center,center, column);
+
+    }
+
+    &__title {
+      @include text(48px,700,#ffffff);
+      text-transform: uppercase;
+      letter-spacing: 4.8px;
+      margin-bottom: 15px;
+      text-align: center;
+
+      @include media(414px){
+        @include text(30px,700,#ffffff);
       }
+    }
 
-      &__contant {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 650px;
-        width:100%;
+    &__subtitle{
+      @include text(22px,700,#ffffff);
+      text-align: center;
+      line-height: 1.18;
+      letter-spacing: 6.82px;
+      margin-bottom: 50px;
+
+      @include media(414px){
+        @include text(14px,700,#ffffff);
+        margin-bottom: 30px;
       }
+    }
 
+    &__input-search {
+      display: flex;
+      position: relative;
+      margin-bottom: 120px;
+      width:100%;
+      max-width: 650px;
 
-      &__title {
-        @include text(48px,700,#ffffff);
-        text-transform: uppercase;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 0.54;
-        letter-spacing: 4.8px;
-        margin-bottom: 15px;
-        text-align: center;
-
+      @include media(768px){
+        margin-bottom: 40px;
+        max-width: 400px;
       }
+    }
 
-      &__subtitle{
-        @include text(22px,700,#ffffff);
-        text-align: center;
-        font-style: normal;
-        line-height: 1.18;
-        letter-spacing: 6.82px;
+    &__input {
+      min-height: 60px;
+      @include flex( center,center, row);
+      max-width: 500px;
+      width: 100%;
+      padding: 0px 15px ;
+      outline: none;
+      border:1px solid #ffffff;
+      @include text(14px,400,$placeholder-color);
+      font-family: $josefin;
+      letter-spacing: 2.8px;
+      text-align: center;
+    }
 
-        margin-bottom: 50px;
+    &__btn {
+      min-height: 60px;
+      padding: 0px 15px ;
+      max-width: 150px;
+      @include flex( center,center, row);
+      border: none;
+      background: #7BA7AB;
+      border:1px solid #ffffff;
+      outline: none;
+      cursor: pointer;
+      position: relative;
 
+      &:hover {
+        background-color: rgba(#496BFE,0.8);
+        transition: all .3s ease-in;
       }
-
-      &__input-search {
-          display: flex;
-          position: relative;
-          margin-bottom: 120px;
-          
-          width:100%;
+      
+      &:active {
+        background-color: rgba(#ffbe33,1);
+        transition: all .1s ease-in;
       }
+    }
 
-      &__input {
-          min-height: 60px;
-          max-width: 500px;
-          width: 100%;
-          padding: 23px 127px  26px 126px;
-          outline: none;
-          border:1px solid #ffffff;
+    &__btn-text {
+      color:#ffffff;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-right: 10px;
+    }
 
-          @include text(14px,400,$placeholder-color);
+    &__btn-icon {
+      color:#ffffff;
+    }
 
-          font-family: $josefin;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.86;
-          letter-spacing: 2.8px;
-          text-align: center;
-
-  
-      }
-
-      &__btn {
-          //width: 20%;
-          min-height: 50px;
-
-          max-width: 150px;
-          padding: 25px 17px 24px 36px;
-          //width: 100%;
-         
-          border: none;
-          background: #7BA7AB;
-          border:1px solid #ffffff;
-          outline: none;
-          cursor: pointer;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          &:hover {
-            background-color: rgba(#496BFE,0.8);
-            transition: all .3s ease-in;
-        }
-    
-           &:active {
-            background-color: rgba(#ffbe33,1);
-            transition: all .1s ease-in;
-        }
-      }
-
-      &__btn-text {
-        color:#ffffff;
-        text-transform: uppercase;
-        font-size: 15px;
-        margin-right: 10px;
-      }
-
-      &__btn-icon {
-        color:#ffffff;
-      }
-
-
-      &__wrap-scroll {
-
-        //position: absolute;
-        bottom: 68px;
-        //left: 50%;
-        display: inline-block;
-        @include text(14px,300,$white);
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &__wrap-scroll {
+      bottom: 68px;
+      display: inline-block;
+      @include text(14px,300,$white);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
         
-        &:hover {
-          
-            color:#ee855f;
-          
-        }
+      &:hover {
+          color:#ee855f;
       }
+    }
 
-      &__scroll-text {
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.86;
-        letter-spacing: 2.8px;
-        text-align: center;
-        margin-bottom: 15px;
+    &__scroll-text {
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.86;
+      letter-spacing: 2.8px;
+      text-align: center;
+      margin-bottom: 15px;
+      @include media(414px){
+        margin-bottom: 5px;
       }
+    }
 
-      &__navigation {
-        background-color: $main-color;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-      }
-
-     &__navigation-container {
-      padding: 10px 15px 10px;
+    &__navigation {
+      background-color: $main-color;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      min-height: 80px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      
-     }
+    }
 
-      &__logo {
-        display: block;
-        @include text(24px,700,#ffffff);  
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.08;
-        letter-spacing: 2.4px;
-        text-align: left;
-        text-transform: uppercase;
+    &__navigation-container {
+      padding: 10px 15px 10px;
+      @include flex( space-between,center, row, nowrap);
+      @include media(350px){
+        @include flex( center,center, column);
+       }
+    }
+
+    &__logo {
+      display: block;
+      @include text(24px,700,#ffffff);  
+      letter-spacing: 2.4px;
+      text-align: left;
+      text-transform: uppercase;
+
+      @include media(350px){
+        margin-right: 0px;
+        margin-bottom: 20px;
+       }
     }
 
     &__menu {
+      @include flex( space-between,center, row,);
+
+      @include media(768px){
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      
     }
 
     &__menu-item {
       margin-right: 43px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include media(768px){
+        max-width: 300px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
         &:last-child {
-            margin-right: 0;
+          margin-bottom: 0;
         }
+      }
     }
 
     &__menu-link {
       @include text(14px,700,$white);  
       font-family: $aleo;
-      font-size: 14px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.86;
-      letter-spacing: normal;
       text-align: left;
       text-transform: uppercase;
 
@@ -219,7 +209,6 @@ $style:"header";
       &:hover {
           color:$dark-grey;  
           transition: all .3s ease-in;
-          
       }
   
       &:active {
