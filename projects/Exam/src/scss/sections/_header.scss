@@ -23,7 +23,7 @@ $style:"header";
 
     @include media(414px){
       @include text(14px,700,#ffffff);
-      min-height: 550px;
+      min-height: 600px;
     }
    
     &__container {
@@ -82,7 +82,10 @@ $style:"header";
       font-family: $josefin;
       letter-spacing: 2.8px;
       text-align: center;
-      border-radius: none;
+      border-radius: 0px; 
+      -webkit-border-radius: 0px; 
+      -moz-border-radius: 0px; 
+      -khtml-border-radius: 0px; 
     }
 
     &__btn {
