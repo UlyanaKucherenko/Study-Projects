@@ -23,7 +23,7 @@ $style:"header";
 
     @include media(414px){
       @include text(14px,700,#ffffff);
-      min-height: 500px;
+      min-height: 550px;
     }
    
     &__container {
